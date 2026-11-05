@@ -1,0 +1,106 @@
+{
+  "built_at": "2026-11-05T23:51:13.608Z",
+  "weights": {
+    "p1_weight": 0.571,
+    "depth_weight": 0,
+    "facts_weight": 0.286,
+    "distance_weight": 0.143,
+    "tie_band": 0.02,
+    "p1_survival": 1,
+    "p1_reproduction": 0.67,
+    "p1_standing": 0.33,
+    "depth_max_myr": 500,
+    "turning_point_share": 0.25,
+    "distance_max": 3
+  },
+  "cases": [
+    {
+      "slug": "antidepressants",
+      "run": "cost/antidepressants-R1-d",
+      "picture": "lowmood (engine pick)",
+      "systems": "calibration",
+      "lead": "library:low-mood-as-social-signal",
+      "engine_top": "library:low-mood-as-social-signal",
+      "lead_differs": false,
+      "missing": [
+        "so now what: 4 moves, first 3 shown"
+      ]
+    },
+    {
+      "slug": "birth-rate",
+      "run": "cost/birth-rate-R1-d",
+      "picture": "village (router vote 2/3; the engine kept no clip)",
+      "systems": "calibration",
+      "lead": "library:conditional-drive-for-children",
+      "engine_top": "library:conditional-drive-for-children",
+      "lead_differs": false,
+      "missing": [
+        "so now what: 4 moves, first 3 shown"
+      ]
+    },
+    {
+      "slug": "adhd",
+      "run": "cost/adhd-R1-d",
+      "picture": "restless (router vote 2/3; the engine kept no clip)",
+      "systems": "calibration",
+      "lead": "library:restless-temperament-in-a-chair",
+      "engine_top": "library:restless-temperament-in-a-chair",
+      "lead_differs": false,
+      "missing": [
+        "so now what: 4 moves, first 3 shown"
+      ]
+    },
+    {
+      "slug": "gallup-engagement",
+      "run": "cost/gallup-engagement-R1-d",
+      "picture": "none",
+      "systems": "calibration",
+      "lead": "library:effort-nobody-sees",
+      "engine_top": "library:effort-nobody-sees",
+      "lead_differs": false,
+      "missing": [
+        "picture: no clip-bank topic fits",
+        "so now what: 4 moves, first 3 shown"
+      ]
+    },
+    {
+      "slug": "viral-fear",
+      "run": "cost/viral-fear-R1-t10",
+      "picture": "speaking (engine pick)",
+      "systems": "calibration",
+      "lead": "library:reputation-before-strangers",
+      "engine_top": "library:reputation-before-strangers",
+      "lead_differs": false,
+      "missing": [
+        "claim list (run predates the claim-list stage)",
+        "so now what: 4 moves, first 3 shown"
+      ]
+    },
+    {
+      "slug": "baristaphobia",
+      "run": "cost/baristaphobia-R1-t10",
+      "picture": "strangers (engine pick)",
+      "systems": "calibration",
+      "lead": "library:stranger-wariness",
+      "engine_top": "library:stranger-wariness",
+      "lead_differs": false,
+      "missing": [
+        "claim list (run predates the claim-list stage)",
+        "so now what: 4 moves, first 3 shown"
+      ]
+    },
+    {
+      "slug": "midterm-anxiety",
+      "run": "cost/midterm-anxiety-R1-t10",
+      "picture": "news (engine pick)",
+      "systems": "calibration",
+      "lead": "library:stranger-rulers-no-exit",
+      "engine_top": "library:stranger-rulers-no-exit",
+      "lead_differs": false,
+      "missing": [
+        "claim list (run predates the claim-list stage)",
+        "so now what: 4 moves, first 3 shown"
+      ]
+    }
+  ]
+}
