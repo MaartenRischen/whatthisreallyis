@@ -3,26 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Online soon</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<style>
-  :root { --bg: #f4f1ea; --ink: #16140f; --dim: #6b665c; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #121110; --ink: #f1ede4; --dim: #9a948a; } }
-  html, body { height: 100%; margin: 0; }
-  body { background: var(--bg); color: var(--ink); font-family: "Schibsted Grotesk", system-ui, sans-serif;
-         display: grid; place-items: center; padding: 0 16px; }
-  main { max-width: 34rem; }
-  h1 { font-size: clamp(2.4rem, 9vw, 4.5rem); line-height: 1; margin: 0 0 .4em; font-weight: 700; letter-spacing: -.02em; }
-  p { font-size: 1.15rem; line-height: 1.5; margin: 0; color: var(--dim); font-weight: 500; }
-</style>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light">
+<title>What this really is</title>
+<meta name="description" content="Real posts and headlines, decoded.">
+<link rel="preload" href="/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<main>
-  <h1>Online soon.</h1>
-  <p>This site is being built. It is not open yet.</p>
+<header class="hero hero-index">
+  <p class="brand">What this really is</p>
+  <h1 class="big">Real posts and headlines. What the human animal in them is actually doing.</h1>
+</header>
+<main class="col">
+  <ul class="cases">
+    <li><a href="antidepressants/"><span class="t">England's antidepressant boom</span><span class="l">Depression without a biomarker is the human brain pulling effort off a life where effort has stopped changing anything.</span><span class="s">NHS Business Services Authority (NHSBSA)</span></a></li>
+    <li><a href="birth-rate/"><span class="t">The baby bust</span><span class="l">The baby bust is a babysitter shortage.</span><span class="s">ifstudies.org</span></a></li>
+    <li><a href="adhd/"><span class="t">The ADHD count</span><span class="l">ADHD is the restless, novelty-chasing drive that sent children out after food for most of human history.</span><span class="s">Centers for Disease Control and Prevention</span></a></li>
+    <li><a href="gallup-engagement/"><span class="t">Falling work engagement</span><span class="l">Disengagement is the human organism pulling effort back from a group that can't see it.</span><span class="s">Gallup.com</span></a></li>
+    <li><a href="viral-fear/"><span class="t">Fear of going viral</span><span class="l">Calling it social anxiety gets it backwards: a brain that goes quiet when cameras come out is guarding the thing that kept humans fed and partnered, their standing.</span><span class="s">LifeStance Health</span></a></li>
+    <li><a href="baristaphobia/"><span class="t">Baristaphobia</span><span class="l">Baristaphobia is what a healthy human brain does when it has to ask a stranger for food.</span><span class="s">The Independent</span></a></li>
+    <li><a href="midterm-anxiety/"><span class="t">Midterm anxiety</span><span class="l">Election anxiety is what a brain built to bring down bosses feels when it can't.</span><span class="s">LifeStance Health</span></a></li>
+  </ul>
+  <p class="fine">Draft pages. Every claim traces to Cor, the evidence atlas at <a href="https://cor.demismatch.com/">cor.demismatch.com</a>.</p>
 </main>
+<script>
+// stop the films for people who asked for less motion
+if (matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelectorAll('video').forEach((v) => { v.removeAttribute('autoplay'); v.pause(); v.controls = true; });
+</script>
 </body>
 </html>

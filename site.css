@@ -1,0 +1,163 @@
+/* whatthisreallyis.com case pages. Built by tools/build-pages.mjs, copied to dist/pages/site.css. */
+/* Fonts are self-hosted (SIL OFL, from Fontsource), latin subset, variable. */
+@font-face { font-family: "Archivo"; font-style: normal; font-display: swap; font-weight: 100 900; font-stretch: 62% 125%; src: url(fonts/archivo-latin-wdth-normal.woff2) format("woff2-variations"), url(fonts/archivo-latin-wdth-normal.woff2) format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-style: normal; font-display: swap; font-weight: 200 900; src: url(fonts/source-serif-4-latin-opsz-normal.woff2) format("woff2-variations"), url(fonts/source-serif-4-latin-opsz-normal.woff2) format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-style: italic; font-display: swap; font-weight: 200 900; src: url(fonts/source-serif-4-latin-opsz-italic.woff2) format("woff2-variations"), url(fonts/source-serif-4-latin-opsz-italic.woff2) format("woff2"); }
+:root {
+  --cobalt: #2335E8;
+  --ink: #15171C;
+  --paper: #F2F3F5;
+  --card: #FFFFFF;
+  --muted: #5A606B;
+  --rule: #D6D9DF;
+  --track: #E2E5EA;
+  --amber: #E3A21A;
+  --teal: #0E9E86;
+  --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --serif: "Source Serif 4", Georgia, serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); font-size: 17px; line-height: 1.55; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--cobalt); outline-offset: 2px; }
+
+/* the claim list: the first thing on screen */
+.hero { background: var(--cobalt); color: #fff; padding: 16px 16px 30px; }
+.hero > * { max-width: 388px; margin-left: auto; margin-right: auto; }
+.brand { display: block; font-family: var(--display); font-weight: 700; font-size: 14px; text-decoration: none; opacity: .8; margin-bottom: 22px; }
+.hero a.brand:focus-visible { outline-color: #fff; }
+.claims { list-style: none; padding: 0; }
+.claims li { position: relative; padding-left: 20px; margin: 0 auto 16px; font-family: var(--display); font-stretch: 75%; font-weight: 800; font-size: 27px; line-height: 1.05; text-wrap: balance; }
+.claims li::before { content: ""; position: absolute; left: 0; top: .32em; width: 9px; height: 9px; background: #fff; }
+.claims li:first-child { font-size: 38px; line-height: 1; padding-left: 0; margin-bottom: 22px; }
+.claims li:first-child::before { display: none; }
+.claims li:last-child { margin-bottom: 0; }
+
+.col { max-width: 420px; margin: 0 auto; padding: 26px 16px 48px; }
+h1 { font-family: var(--display); font-stretch: 87%; font-weight: 800; font-size: 25px; line-height: 1.1; margin: 0 0 10px; }
+.opening { font-size: 20px; line-height: 1.42; margin: 0 0 12px; }
+.opening strong { font-weight: 650; }
+.source { font-family: var(--display); font-size: 13.5px; line-height: 1.4; color: var(--muted); margin: 0 0 24px; }
+
+/* then and now */
+.pair { margin: 0 0 28px; }
+.clip { margin: 0 0 14px; }
+.clip video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; background: #C9CDD4; }
+.clip figcaption { font-family: var(--display); font-size: 15px; line-height: 1.3; margin-top: 7px; }
+.clip .when { font-weight: 800; margin-right: .3em; }
+
+.prose p { margin: 0 0 1em; }
+
+h2 { font-family: var(--display); font-stretch: 87%; font-weight: 800; font-size: 25px; line-height: 1.1; margin: 44px 0 12px; }
+h3 { font-family: var(--display); font-weight: 700; font-size: 16px; margin: 22px 0 4px; }
+
+/* theirs beside ours */
+.vs { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+.vs > div { padding: 14px 13px 16px; }
+.theirs { background: var(--card); }
+.ours { background: var(--cobalt); color: #fff; }
+.who { font-family: var(--display); font-weight: 700; font-size: 13px; margin: 0 0 8px; color: var(--muted); }
+.ours .who { color: #fff; opacity: .8; }
+.vs .claim { font-size: 16px; line-height: 1.35; margin: 0; }
+.ours .claim { font-family: var(--display); font-stretch: 80%; font-weight: 800; font-size: 21px; line-height: 1.1; }
+.quote { font-style: italic; font-size: 14px; line-height: 1.4; color: var(--muted); margin: 10px 0 0; }
+.held { font-family: var(--display); font-size: 12.5px; line-height: 1.35; color: var(--muted); margin: 8px 0 0; }
+
+/* which system wins */
+.dek { font-size: 15px; line-height: 1.45; color: var(--muted); margin: 0 0 16px; }
+.axis { display: flex; justify-content: space-between; font-family: var(--display); font-size: 12px; color: var(--muted); margin: 0 0 4px; padding-right: 2px; }
+.systems { list-style: none; margin: 0; padding: 0; }
+.sys { display: grid; grid-template-columns: 70px 1fr; }
+.age { position: relative; }
+.spine { position: absolute; left: 0; top: 0; width: 14px; height: 100%; }
+.spine line { stroke: var(--rule); stroke-width: 2; vector-effect: non-scaling-stroke; }
+.node { position: absolute; left: 2px; top: 10px; width: 10px; height: 10px; border-radius: 50%; background: var(--paper); border: 2px solid var(--muted); }
+.win .node { background: var(--cobalt); border-color: var(--cobalt); box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px var(--cobalt); }
+.myr { position: absolute; left: 20px; top: 6px; font-family: var(--display); font-stretch: 75%; font-weight: 800; font-size: 16px; line-height: 1; color: var(--muted); white-space: nowrap; }
+.myr .u { display: block; font-stretch: 85%; font-weight: 500; font-size: 10.5px; margin-top: 3px; }
+.win .myr { color: var(--ink); }
+.body { padding: 6px 0 22px; min-width: 0; }
+.win .body { background: var(--card); margin: 0 0 14px -8px; padding: 8px 8px 14px; border-radius: 6px; box-shadow: inset 4px 0 0 var(--cobalt); padding-left: 14px; }
+.sysname { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-family: var(--display); font-weight: 700; font-size: 14px; }
+.sysname a { text-decoration: none; }
+.sysname a:hover { text-decoration: underline; }
+.wins { background: var(--cobalt); color: #fff; font-family: var(--display); font-weight: 800; font-size: 12px; padding: 2px 8px; border-radius: 3px; }
+.reading { font-size: 15.5px; line-height: 1.3; margin: 3px 0 9px; }
+.win .reading { font-weight: 650; font-size: 17px; }
+.reg .sysname, .reg .reading { color: var(--muted); }
+.bar { display: block; margin: 0 0 7px; overflow: visible; }
+.track { fill: var(--track); }
+.s-p1 { fill: var(--cobalt); background: var(--cobalt); }
+.s-facts { fill: var(--amber); background: var(--amber); }
+.s-dist { fill: var(--teal); background: var(--teal); }
+.sv { font-family: var(--display); font-weight: 700; font-size: 12px; fill: var(--ink); }
+.dots { display: block; margin: 0 0 7px; overflow: visible; }
+.d-on { fill: var(--ink); }
+.d-off { fill: none; stroke: #AEB3BC; stroke-width: 1.5; }
+.d-tp { stroke: var(--cobalt); stroke-width: 2; }
+.d-tp.d-on { fill: var(--cobalt); }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-family: var(--display); font-weight: 500; font-size: 12.5px; color: var(--muted); }
+.sep { width: 3px; height: 3px; border-radius: 50%; background: #AEB3BC; }
+.p1g .on { fill: var(--ink); }
+.p1g .off { fill: #C9CDD4; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 16px; font-family: var(--display); font-size: 12.5px; color: var(--muted); margin: 0 0 14px 70px; }
+.k { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.why { font-size: 16px; line-height: 1.45; background: var(--card); padding: 14px 16px; border-left: 4px solid var(--cobalt); margin: 0 0 12px; }
+details.quiet > summary { font-family: var(--display); font-size: 14px; color: var(--muted); cursor: pointer; padding: 6px 0; }
+.facts { list-style: none; padding: 0; margin: 8px 0 14px; font-size: 14px; line-height: 1.4; }
+.facts li { margin: 0 0 6px; }
+.fid { font-family: var(--display); font-weight: 700; font-size: 12px; color: var(--muted); margin-right: 4px; }
+table.scores { width: 100%; border-collapse: collapse; font-family: var(--display); font-size: 12.5px; line-height: 1.3; }
+.scores th, .scores td { text-align: left; padding: 5px 4px 5px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.scores th { font-weight: 700; color: var(--muted); }
+.scores tr.win td { font-weight: 700; }
+.fine { font-family: var(--display); font-size: 13px; line-height: 1.45; color: var(--muted); }
+
+/* so now what */
+.now ul { list-style: none; padding: 0; margin: 0; }
+.now li { position: relative; padding: 12px 0 13px 24px; border-top: 2px solid var(--ink); font-family: var(--display); font-stretch: 90%; font-weight: 600; font-size: 18px; line-height: 1.28; }
+.now li::before { content: ""; position: absolute; left: 0; top: 19px; width: 10px; height: 10px; background: var(--cobalt); }
+.med { font-size: 14px; line-height: 1.45; color: var(--muted); background: var(--card); padding: 12px 14px; border-radius: 4px; margin: 10px 0 0; }
+
+/* how do we know: quieter, closed by default */
+.know { margin-top: 44px; }
+.know summary { list-style: none; display: flex; align-items: baseline; gap: 10px; cursor: pointer; border-top: 2px solid var(--ink); padding-top: 10px; }
+.know summary::-webkit-details-marker { display: none; }
+.know summary h2 { margin: 0; font-size: 21px; }
+.know summary .n { font-family: var(--display); font-size: 13px; color: var(--muted); flex: 1; }
+.know summary::after { content: "+"; font-family: var(--display); font-weight: 700; font-size: 24px; line-height: 1; }
+.know details[open] > summary::after { content: "-"; }
+.hdwk { list-style: none; padding: 0; margin: 10px 0 0; font-size: 15px; line-height: 1.45; }
+.hdwk li { padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.hdwk p { margin: 0 0 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.chip { font-family: var(--display); font-weight: 600; font-size: 12px; text-decoration: none; background: var(--card); border: 1px solid var(--rule); border-radius: 999px; padding: 2px 9px; color: var(--ink); }
+a.chip:hover { border-color: var(--ink); }
+.chip .g { font-weight: 500; color: var(--muted); }
+.chip.src { background: var(--ink); color: #fff; border-color: var(--ink); }
+.study { font-family: var(--display); font-size: 13px; color: var(--muted); }
+
+.sources h2 { font-size: 19px; margin-top: 36px; }
+.sources ol { font-size: 13.5px; line-height: 1.45; color: var(--muted); padding-left: 20px; margin: 0; }
+.sources li { margin: 0 0 5px; overflow-wrap: anywhere; }
+
+.slot { border: 2px dashed #9AA0AB; color: var(--muted); padding: 14px; font-family: var(--display); font-weight: 500; font-size: 14px; line-height: 1.4; border-radius: 6px; }
+.slot-hero { border-color: rgba(255, 255, 255, .65); color: #fff; font-size: 16px; }
+.foot { margin-top: 40px; border-top: 2px solid var(--ink); padding-top: 12px; font-family: var(--display); font-weight: 700; font-size: 15px; }
+
+/* index */
+.hero-index { padding-bottom: 34px; }
+.hero-index .brand { margin-bottom: 16px; }
+.big { font-family: var(--display); font-stretch: 75%; font-weight: 800; font-size: 42px; line-height: 1; margin: 0; text-wrap: balance; }
+.cases { list-style: none; padding: 0; margin: 0 0 24px; }
+.cases a { display: block; text-decoration: none; padding: 16px 0 18px; border-bottom: 2px solid var(--ink); }
+.cases .t { display: block; font-family: var(--display); font-weight: 700; font-size: 13px; color: var(--muted); margin-bottom: 5px; }
+.cases .l { display: block; font-family: var(--display); font-stretch: 80%; font-weight: 800; font-size: 23px; line-height: 1.1; }
+.cases .s { display: block; font-family: var(--display); font-size: 13px; color: var(--muted); margin-top: 7px; }
+.cases a:hover .l { color: var(--cobalt); }
+
+@media (min-width: 700px) {
+  .claims li:first-child { font-size: 44px; }
+  .big { font-size: 52px; }
+}
