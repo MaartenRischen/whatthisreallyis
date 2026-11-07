@@ -238,6 +238,9 @@ h1.big { margin: 0; font-family: var(--f-display); font-stretch: var(--display-s
 @media (min-width: 760px) { h1.big { font-size: clamp(72px, 9.5vw, 150px); } .cases { grid-template-columns: 1fr 1fr; gap: 56px 32px; } }
 @media (min-width: 1100px) { .cases { grid-template-columns: 1fr 1fr 1fr; } }
 
+/* index hero subline (claude-web, 7 Nov 2026) */
+.hero-index .hero-sub{max-width:40rem;margin:1rem 0 0;font-size:clamp(1.05rem,2.2vw,1.35rem);line-height:1.4;font-weight:600}
+
 /* C. Marker: Inter Tight Black, black on white, a yellow highlighter on the turn of the claim line,
    on the Cor strip and on the winner. Yellow is never text colour (too faint on white). */
 @font-face { font-family: "Inter Tight"; src: url("fonts/inter-tight-latin-wght-normal.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
