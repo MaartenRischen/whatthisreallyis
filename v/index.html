@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ten versions | whatreally.is</title>
+<style>
+:root { color-scheme: light; --ink: #111; --bg: #fff; --mid: #5a5a5a; --line: #111; --pick: #e8e8e4; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.45 -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+a { color: inherit; }
+.top { padding: 28px 16px 8px; max-width: 1400px; margin: 0 auto; }
+h1 { font-size: clamp(34px, 7vw, 76px); line-height: 0.95; letter-spacing: -0.03em; margin: 0 0 14px; font-weight: 800; }
+.top p { max-width: 62ch; margin: 0 0 8px; color: var(--mid); }
+.list { list-style: none; margin: 0 auto; padding: 8px 16px 64px; max-width: 1400px; display: grid; gap: 40px 28px; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .list { grid-template-columns: 1fr 1fr; } }
+.v { border-top: 8px solid var(--line); padding-top: 14px; }
+.vh { display: flex; align-items: baseline; gap: 14px; margin: 0 0 6px; }
+.vn { font-size: 44px; font-weight: 800; line-height: 1; letter-spacing: -0.03em; }
+.vt { font-size: 22px; font-weight: 700; line-height: 1.15; margin: 0; }
+.vt a { text-decoration: none; }
+.vt a:hover { text-decoration: underline; }
+.d { margin: 0 0 4px; }
+.b { margin: 0 0 12px; font-size: 14px; color: var(--mid); }
+.shots { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.shots a { display: block; background: var(--pick); }
+.shots img { display: block; width: 100%; height: auto; aspect-ratio: 390 / 844; object-fit: cover; object-position: top; }
+.shots span { display: block; font-size: 13px; padding: 6px 2px 0; color: var(--mid); background: var(--bg); }
+.go { display: inline-block; margin-top: 12px; font-weight: 700; }
+.un { max-width: 1400px; margin: 0 auto; padding: 0 16px 64px; color: var(--mid); font-size: 15px; }
+</style>
+</head>
+<body>
+<header class="top">
+<h1>Ten versions of whatreally.is</h1>
+<p>Same ten cases, same approved titles and Cor evidence in every version; only the design changes. Each picture is a phone screen: the front page, and one case page. Tap a version to open it.</p>
+<p>All pages here are drafts and hidden from search. The live site at <a href="/">whatreally.is</a> is unchanged.</p>
+</header>
+<ol class="list">
+<li class="v" id="v05">
+<div class="vh"><span class="vn">05</span><h2 class="vt"><a href="05/">Tabloid front page</a></h2></div>
+<p class="d">A red-top tabloid front page: the red masthead block with the reversed title, the first case as the splash with its source as the main exhibit, the other nine stacked as stories with their source pictures as photo boxes.</p>
+<p class="d">Case pages read like a tabloid spread: the claim line fitted huge across the full width with its &quot;but&quot; half in red, the source and its verbatim quotes boxed in one frame, the then and now films as a two-photo strip, numbered punch boxes with a black COR SAYS panel, and a thick-bar chart with the winner in a red reverse band.</p>
+<p class="b">Based on: new design (concept assigned by the coordinator: THE TABLOID FRONT PAGE). Content is v/data only; the index hero and hero_sub come from content/headlines.json because site.json has them empty (see Known issues).</p>
+<div class="shots">
+<a href="05/"><img src="_chooser/05-index.jpg" alt="Version 05, front page on a phone" width="390" height="844" loading="lazy"><span>Front page</span></a>
+<a href="05/a-bassist-miming-to-a-backing-track/"><img src="_chooser/05-case.jpg" alt="Version 05, case page on a phone" width="390" height="844" loading="lazy"><span>Case page</span></a>
+</div>
+<a class="go" href="05/">Open version 05</a>
+</li>
+<li class="v" id="v06">
+<div class="vh"><span class="vn">06</span><h2 class="vt"><a href="06/">Swiss grid, big data graphics</a></h2></div>
+<p class="d">Swiss International Typographic Style: a strict 12-column grid (4 on phone), one grotesk in three weights, black, white and one signal red, with the source screenshot and its verbatim quotes on a grey plate right under the title.</p>
+<p class="d">Data is the hero: the Cor counts as giant numerals, the claims as a grid table (claim, Cor says, grade and ids), and a full-width system-wins chart with bars to scale, a real age scale and the winning score as a huge red numeral.</p>
+
+<div class="shots">
+<a href="06/"><img src="_chooser/06-index.jpg" alt="Version 06, front page on a phone" width="390" height="844" loading="lazy"><span>Front page</span></a>
+<a href="06/a-bassist-miming-to-a-backing-track/"><img src="_chooser/06-case.jpg" alt="Version 06, case page on a phone" width="390" height="844" loading="lazy"><span>Case page</span></a>
+</div>
+<a class="go" href="06/">Open version 06</a>
+</li>
+</ol>
+<p class="un">Still being built or checked: 01, 02, 03, 04, 07, 08, 09, 10. They appear here when they are finished.</p>
+</body>
+</html>
