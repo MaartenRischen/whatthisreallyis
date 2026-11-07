@@ -1,0 +1,273 @@
+/* v/01: the /3d/ swap cards page (21-23 Oct 2026), its own CSS extended to today's content.
+   Tokens, faces, the white source frame, quotes, link line, teal mono labels, oxblood chips and teal discs are the
+   /3d/ page's (decode-talk-v2/design/line/approaches/cards3d/site/index.html, <style>). Fonts self-hosted (OFL). */
+@font-face{font-family:"Spectral";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/spectral-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Spectral";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/spectral-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:"Spectral";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/spectral-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Spectral";font-style:italic;font-weight:500;font-display:swap;src:url(fonts/spectral-latin-500-italic.woff2) format("woff2")}
+@font-face{font-family:"Spectral";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/spectral-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:100 800;font-display:swap;src:url(fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2")}
+
+:root{--oxblood:#3a1218;--parchment:#ece0c4;--teal:#2d6b6b;--gold:#8a6414;--ring:#d9ab3c;--red:#B3261C;--film-red:#E0201A;--link:#1a4d8f;
+  --serif:"Spectral",Georgia,serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--sans:-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --rule:rgba(58,18,24,.18);--dim:rgba(58,18,24,.62);--gap:40px}
+html,body{margin:0;background:var(--parchment);color:var(--oxblood)}
+body{overflow-x:hidden;-webkit-text-size-adjust:100%;font:400 17px/1.4 var(--serif)}
+img{display:block;width:100%;height:auto}
+a{color:inherit}
+p{margin:0}
+figure{margin:0}
+*{box-sizing:border-box}
+
+/* ---------- the page grid: phone-width columns, side by side on desktop ---------- */
+.wrap{width:calc(100% - 32px);max-width:1280px;margin:0 auto}
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:36px var(--gap);list-style:none;margin:0;padding:0}
+@media (min-width:480px) and (max-width:819px){.wrap{width:430px}}
+@media (min-width:820px){.wrap{width:840px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1220px){.wrap{width:calc(100% - 64px);max-width:1280px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* ---------- the Cor strip (top, always visible) ---------- */
+.corbar{position:sticky;top:0;z-index:5;background:var(--oxblood);color:var(--parchment)}
+.corbar .in{display:flex;align-items:center;gap:10px;padding:7px 0 8px}
+.corbar p{font:400 12.5px/1.35 var(--mono)}
+.corbar b{font-weight:600;color:#fff}
+.corbar a{color:#fff;text-underline-offset:2px}
+.corbar .mark{display:flex;flex:none}
+.rings{width:22px;height:22px;fill:none;stroke:var(--ring);stroke-width:1.8}
+.rings .dot{fill:var(--ring);stroke:none}
+.corbar .lg{display:none}
+@media (max-width:419px){.corbar b{display:none}}
+@media (min-width:820px){.corbar .lg{display:inline}.corbar .sm{display:none}.corbar p{font-size:13px}}
+
+/* ---------- masthead and header (the /3d/ header: Spectral italic h1, Spectral intro) ---------- */
+.mast{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:18px 0 0}
+.brand{font:italic 500 24px/1.1 var(--serif);text-decoration:none;color:var(--oxblood)}
+.mast nav{display:flex;gap:16px}
+.mast nav a{font:500 14px/1.3 var(--sans);color:var(--dim);text-decoration:none}
+.mast nav a:hover{color:var(--oxblood);text-decoration:underline}
+.head{padding:26px 0 30px}
+.ask{font:500 13px/1.45 var(--mono);color:var(--teal);margin:0 0 14px;overflow-wrap:anywhere}
+.ask .url{display:block;color:var(--dim);font-weight:400}
+h1.line,h1.hero{font:italic 500 clamp(32px,4.4vw,62px)/1.08 var(--serif);margin:0 0 18px;letter-spacing:-.005em}
+h1.line{max-width:1180px}
+.sum{font:400 clamp(18px,1.7vw,22px)/1.4 var(--serif);max-width:62ch}
+.head.idx{padding-bottom:36px}
+.head.idx .sum{max-width:62ch}
+
+/* ---------- section labels: the /3d/ h3 (teal mono caps) ---------- */
+.lbl{font:500 13px/1.3 var(--mono);color:var(--teal);text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px}
+.band{margin:56px 0 0;padding:16px 0 0;border-top:2px solid var(--oxblood)}
+.band>.lbl{margin-bottom:18px}
+.col{min-width:0;border-top:1px solid var(--oxblood);padding-top:20px}
+
+/* ---------- the first row: the /3d/ card spread out. Phone: source, pictures, why, mechanisms in one column.
+   Desktop: the source frame over two columns, the pictures beside it (sticky), why and the mechanisms under it. */
+.card{align-items:start}
+@media (min-width:820px){
+  .card{grid-template-areas:"src src" "pics pics" "why mech"}
+  .c-src{grid-area:src}.c-pics{grid-area:pics}.c-why{grid-area:why}.c-mech{grid-area:mech}
+  .card .c-pics .pp{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .card .c-pics .fig+.fig{margin-top:0}
+}
+@media (min-width:1220px){
+  .card{grid-template-areas:"src src pics" "why mech pics";row-gap:44px}
+  .card .c-pics{position:sticky;top:44px}
+  .card .c-pics .pp{display:block}
+  .card .c-pics .fig+.fig{margin-top:3px}
+}
+.claim.noc .cs{margin-top:2px}
+/* the white frame, quotes and link line (as on /3d/) */
+.src{background:#fff;color:#1d1d1d;border:1px solid var(--oxblood);border-radius:3px;padding:12px 12px 10px;box-shadow:0 2px 0 rgba(58,18,24,.15)}
+.from{font:600 12px/1 var(--sans);text-transform:uppercase;letter-spacing:.08em;color:#666;margin:0 0 10px}
+.shot img{border:1px solid #ddd}
+.shot.ix img{max-height:400px;object-fit:cover;object-position:top}
+.link{font:400 13px/1.5 var(--sans);color:#555;margin:10px 0 0;padding-top:8px;border-top:1px solid #e3e3e3}
+.link a{color:var(--link)}
+.link.more{border-top:0;margin-top:0;padding-top:0}
+.quotes{margin:12px 0 0}
+blockquote{font:400 15px/1.45 var(--sans);color:#1d1d1d;margin:0 0 10px;padding:0 0 0 12px;border-left:3px solid #c8c8c8}
+blockquote cite{display:block;font:normal 400 12.5px/1.4 var(--sans);color:#777;margin-top:3px}
+@media (min-width:820px){.c-src .src{padding:16px 18px 12px}.c-src .quotes{display:grid;grid-template-columns:1fr 1fr;gap:6px 28px;margin-top:16px}.c-src .quotes blockquote{margin-bottom:8px}}
+/* the text card: stands in for a screenshot until one exists (outlet, headline, date) */
+.tcard{border:1px solid #ddd;background:#fff}
+.tc{display:block;padding:14px 14px 16px;color:inherit;text-decoration:none}
+.tcard .o{display:block;font:700 13px/1.2 var(--sans);color:#1d1d1d;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #e3e3e3}
+.tcard .t{display:block;font:700 21px/1.22 var(--sans);color:#111;letter-spacing:-.01em}
+.tcard .d{display:block;font:400 13px/1.3 var(--sans);color:#666;margin-top:8px}
+a.tc:hover .t{text-decoration:underline}
+@media (min-width:820px){.c-src .tc{padding:20px 22px 22px}.c-src .tcard .t{font-size:32px;line-height:1.15}.c-src .tcard .o{font-size:15px}}
+
+/* the two pictures (Today / What the brain sees, or the then and now films) */
+.pics .fig+.fig{margin-top:3px}
+.fig figcaption{font:500 17px/1.3 var(--serif);margin:7px 0 14px}
+.fig figcaption b{display:block;font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--teal);margin-bottom:3px}
+.film{position:relative;aspect-ratio:16/9;background:#14110f;overflow:hidden}
+.film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.film.now::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 2px var(--film-red);pointer-events:none}
+
+/* ---------- Why (the lead) ---------- */
+.say .ttl{font:500 24px/1.2 var(--serif);margin:0 0 10px}
+.say p{font:400 17px/1.45 var(--serif)}
+.say strong{font-weight:600}
+.srcline{font:400 13px/1.5 var(--sans)!important;color:#555;margin-top:12px!important;padding-top:8px;border-top:1px solid var(--rule)}
+.srcline a{color:var(--link)}
+
+/* ---------- the mechanisms at work (the /3d/ .cor block) ---------- */
+.mechs{display:grid;gap:22px}
+.mech figcaption{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px}
+.code{font:500 13px/1 var(--mono);color:#fff;background:var(--oxblood);padding:4px 6px 3px;border-radius:2px;text-decoration:none;white-space:nowrap}
+a.code:hover{background:var(--teal)}
+.nm{font:500 18px/1.25 var(--serif)}
+.meta{flex-basis:100%;font:400 12px/1.4 var(--mono);color:var(--teal);margin-top:4px}
+.wins{font:500 10.5px/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:#fff;background:var(--teal);padding:4px 6px 3px;border-radius:2px;align-self:center}
+.plain{font:400 15.5px/1.42 var(--serif);margin:8px 0 0}
+.needs,.acad{font:400 15px/1.4 var(--serif);margin:4px 0 0}
+.acad{font:400 13px/1.45 var(--sans);color:#4a3a3c}
+.more{margin:8px 0 0}
+.more summary{cursor:pointer;font:500 10.5px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--teal);list-style-position:inside}
+.more[open] summary{margin-bottom:2px}
+.k{display:block;font:500 10.5px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--teal);margin-bottom:2px}
+
+/* ---------- the claims, each with Cor says and its ids by grade ---------- */
+.glegend{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;font:400 12px/1.3 var(--mono);color:var(--teal);margin:0 0 22px}
+.glegend .gl-t{font-weight:600;color:var(--oxblood)}
+.gl{display:inline-flex;align-items:center;gap:6px}
+.gm{width:11px;height:11px;flex:none;fill:currentColor}
+.gm .o{fill:none;stroke:currentColor;stroke-width:1.6}
+.gm .d{stroke-dasharray:2 1.6}
+.claims{counter-reset:none}
+.claim{position:relative;border-top:1px solid var(--oxblood);padding:16px 0 0 38px}
+.claim .n{position:absolute;left:0;top:16px;width:26px;height:26px;border-radius:50%;background:var(--oxblood);color:#fff;font:500 13px/26px var(--mono);text-align:center}
+.claim .c{font:500 19px/1.3 var(--serif);margin:0 0 12px}
+.cs{position:relative;padding:2px 0 2px 14px}
+.cs::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--teal)}
+.cs .says{font:400 16px/1.42 var(--serif);margin:0 0 8px}
+.cs.gapc::before{background:none;border-left:2px dashed rgba(58,18,24,.5);width:0}
+.gap{font:500 13px/1.4 var(--mono);color:var(--red)}
+.gapnote{font:italic 400 14px/1.4 var(--serif);color:rgba(58,18,24,.8);margin:6px 0 0}
+.ev{list-style:none;margin:0;padding:0}
+.ev li{display:flex;flex-wrap:wrap;align-items:center;gap:5px 8px;margin:5px 0 0}
+.ev .g{display:inline-flex;align-items:center;gap:6px;font:500 11.5px/1.3 var(--mono);color:var(--teal);flex-basis:100%}
+.ev .ids{display:flex;flex-wrap:wrap;align-items:center;gap:5px 6px}
+.code.sm{font-size:11.5px;padding:3px 5px 2px}
+.code.src{background:var(--teal)}
+.ref{font:400 12.5px/1.3 var(--sans);color:#5a4a4c;margin-right:6px}
+
+/* ---------- which system wins (a white frame like the source frame: pristine) ---------- */
+.graph{background:#fff;color:#1d1d1d;border:1px solid var(--oxblood);border-radius:3px;box-shadow:0 2px 0 rgba(58,18,24,.15);padding:16px 14px 14px}
+@media (min-width:820px){.graph{padding:22px 26px 18px}}
+.dek{font:400 16px/1.45 var(--serif);color:var(--oxblood);margin:0 0 14px;max-width:70ch}
+.systems{list-style:none;margin:0;padding:0}
+.sys{position:relative;display:grid;grid-template-columns:70px minmax(0,1fr) 54px;grid-template-areas:"age who who" "bar bar score";gap:6px 12px;align-items:center;padding:14px 0 14px 10px;border-bottom:1px solid rgba(58,18,24,.14)}
+.sys .age{grid-area:age;align-self:start;font:500 13px/1.3 var(--mono);color:var(--teal);padding-top:3px}
+.sys .who{grid-area:who;min-width:0}
+.sys .barw{grid-area:bar;min-width:0}
+.sys .score{grid-area:score;font:600 24px/1 var(--serif);text-align:right;color:var(--oxblood);font-variant-numeric:tabular-nums}
+.sys .nm{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font:500 18px/1.25 var(--serif);color:var(--oxblood)}
+.sys .nm a{color:var(--oxblood);text-decoration-thickness:1px;text-underline-offset:3px}
+.sys .rd{font:400 14.5px/1.35 var(--sans);color:#2a1a1c;margin-top:2px}
+.sys .mt{font:400 11.5px/1.4 var(--mono);color:var(--teal);margin-top:3px}
+.sys .note{font:italic 400 14px/1.35 var(--serif);color:var(--red);margin-top:2px}
+.sys.win{background:rgba(45,107,107,.09)}
+.sys.win::before{content:"";position:absolute;left:0;top:0;bottom:-1px;width:4px;background:var(--oxblood)}
+.sys.win .score{font-size:30px}
+.bar{position:relative;display:flex;height:22px;background:repeating-linear-gradient(90deg,rgba(58,18,24,.22) 0 1px,transparent 1px var(--grid));box-shadow:inset 0 -1px 0 rgba(58,18,24,.3)}
+.seg{display:block;height:100%}
+.s-stake{background:var(--oxblood)}.s-det{background:var(--teal)}.s-dist{background:var(--gold)}
+.sys.axis{border-bottom:1px solid rgba(58,18,24,.35);padding-top:0;padding-bottom:8px;grid-template-areas:"bar bar score"}
+.sys.axis .age{display:none}
+.sys.axis .who{display:none}
+.sys.axis .age{font:500 10.5px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--dim);align-self:end;padding:0}
+.sys.axis .score{font:500 10.5px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--dim);align-self:end}
+.ticks{position:relative;height:16px}
+.ticks span{position:absolute;bottom:0;transform:translateX(-50%);font:400 11px/1 var(--mono);color:var(--dim)}
+.ticks span:first-child{transform:none}
+@media (min-width:820px){
+  .sys{grid-template-columns:96px minmax(240px,340px) minmax(0,1fr) 78px;grid-template-areas:"age who bar score";gap:6px 22px;padding:16px 0 16px 12px}
+  .sys .age{align-self:center;padding:0;font-size:14px}
+  .sys .score{font-size:30px}.sys.win .score{font-size:38px}
+  .bar{height:30px}
+  .sys.axis{grid-template-areas:"age who bar score"}
+  .sys.axis .age{display:block}
+  .sys.axis .who{display:block}
+}
+.keys{display:flex;flex-wrap:wrap;gap:6px 22px;font:500 12.5px/1.3 var(--mono);color:var(--oxblood);margin:16px 0 0}
+.keys span{display:inline-flex;align-items:center;gap:8px}
+.sw{display:inline-block;width:22px;height:12px}
+.whyw{font:400 17px/1.45 var(--serif);color:var(--oxblood);margin:16px 0 0;max-width:80ch}
+.whyw strong{font-weight:600}
+.fine{font:400 12px/1.5 var(--mono);color:var(--teal);margin:12px 0 0;max-width:110ch}
+.facts{margin:14px 0 0;font:400 14px/1.45 var(--sans);color:#333}
+.facts summary{cursor:pointer;font:500 12.5px/1.3 var(--mono);color:var(--teal);text-transform:uppercase;letter-spacing:.05em}
+.facts ol{list-style:none;margin:10px 0 0;padding:0;columns:1}
+@media (min-width:820px){.facts ol{columns:2;column-gap:40px}}
+@media (min-width:1220px){.facts ol{columns:3}}
+.facts li{break-inside:avoid;margin:0 0 6px}
+.fid{font:500 11px/1.3 var(--mono);color:var(--teal);margin-right:4px}
+
+/* ---------- what they say it is: theirs (a clipping) beside ours ---------- */
+.vs{align-items:start}
+.theirs{background:#fff;color:#1d1d1d;border:1px solid var(--oxblood);border-radius:3px;padding:14px 14px 12px;box-shadow:0 2px 0 rgba(58,18,24,.15)}
+.theirs .claimt{font:500 18px/1.35 var(--sans);color:#111;margin:0 0 12px}
+.theirs blockquote{margin:0}
+.theirs .who{font:400 13px/1.45 var(--sans);color:#555;margin:10px 0 0;padding-top:8px;border-top:1px solid #e3e3e3}
+.ours{background:var(--oxblood);color:var(--parchment);border-radius:3px;padding:14px 16px 16px}
+.ours .k{color:#9fd0c9}
+.ours .claimt{font:italic 500 22px/1.3 var(--serif);color:#fff;margin-top:6px}
+.wrong{border-top:1px solid var(--oxblood);padding-top:12px}
+.wrong p:not(.k){font:400 17px/1.45 var(--serif)}
+.wrong .k{font-size:12px}
+
+/* ---------- the rest, so now what (the /3d/ teal discs) ---------- */
+.prose p{font:400 17px/1.5 var(--serif)}
+.nowwhat ol{counter-reset:a}
+.nowwhat li{counter-increment:a;position:relative;padding:12px 0 12px 38px;border-top:1px solid var(--rule);font:500 18px/1.4 var(--serif)}
+.nowwhat li::before{content:counter(a);position:absolute;left:0;top:13px;width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;font:500 13px/26px var(--mono);text-align:center}
+.med{font:italic 400 16px/1.45 var(--serif);margin:18px 0 0;max-width:80ch}
+.films2{align-items:start}
+@media (min-width:1220px){.films2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ---------- how do we know, sources ---------- */
+.know{display:block}
+@media (min-width:820px){.know{columns:2;column-gap:var(--gap)}}
+@media (min-width:1220px){.know{columns:3}}
+.kcol{min-width:0}
+.kcol+.kcol{margin-top:22px}
+.kcol .lbl{break-after:avoid}
+.hdwk>li{break-inside:avoid}
+.hdwk{list-style:none;margin:0;padding:0}
+.hdwk>li{padding:10px 0;border-top:1px solid var(--rule)}
+.hdwk>li>p{font:400 15.5px/1.42 var(--serif)}
+.hdwk .study{font:400 13px/1.4 var(--sans);color:#5a4a4c;margin-top:4px}
+.srcs{margin:0;padding:0 0 0 22px;font:400 14px/1.45 var(--sans);color:#3a2a2c}
+.srcs li{margin:0 0 7px;break-inside:avoid;padding-left:2px}
+.srcs a{color:var(--link)}
+.srcs li::marker{font:500 11px var(--mono);color:var(--teal)}
+@media (min-width:820px){.srcs{columns:2;column-gap:var(--gap)}}
+@media (min-width:1220px){.srcs{columns:3}}
+
+/* ---------- pager and footer (the /3d/ foot: teal mono) ---------- */
+.pager{display:grid;gap:14px;margin:56px 0 0;padding:16px 0 0;border-top:2px solid var(--oxblood)}
+@media (min-width:820px){.pager{grid-template-columns:auto 1fr;align-items:start;gap:var(--gap)}}
+.pager a{text-decoration:none}
+.pager .all{font:500 15px/1.4 var(--sans);color:var(--oxblood);text-decoration:underline;text-underline-offset:3px}
+.pager .next{font:italic 500 22px/1.25 var(--serif);color:var(--oxblood)}
+.pager .next:hover{text-decoration:underline}
+.foot{margin-top:48px;padding:20px 0 40px;border-top:1px solid var(--oxblood)}
+.foot p{font:400 13px/1.5 var(--mono);color:var(--teal)}
+.foot a{color:var(--teal)}
+.foot .vlink{margin-top:8px;font-size:12px}
+
+/* ---------- the index: one card per case, laid out as the /3d/ page laid out its cards ---------- */
+.ix{gap:48px var(--gap)}
+.ixc{min-width:0;border-top:1px solid var(--oxblood);padding-top:20px}
+.ixc>a{display:block;text-decoration:none;color:inherit}
+.ixl{font:italic 500 24px/1.18 var(--serif);margin:0 0 14px}
+.ixc>a:hover .ixl{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.ixc .src{padding-bottom:12px}
+.ixc .tcard .t{font-size:19px}
+.still{margin-top:3px}
+.ixm{font:400 12.5px/1.4 var(--mono);color:var(--teal);margin-top:10px}
+.ixu{font:400 11.5px/1.4 var(--mono);color:var(--dim);margin-top:2px;overflow-wrap:anywhere}
+
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important}}
