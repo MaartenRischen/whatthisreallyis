@@ -1,5 +1,11 @@
 {
-  "built_at": "2026-11-05T23:51:13.608Z",
+  "built_at": "2026-11-07T11:41:32.761Z",
+  "cor": {
+    "extractions": 658,
+    "works": 159,
+    "store_baked_at": "2026-11-06T02:28:53.823Z"
+  },
+  "batch": "R1-sub2",
   "weights": {
     "p1_weight": 0.571,
     "depth_weight": 0,
@@ -15,91 +21,159 @@
   },
   "cases": [
     {
-      "slug": "antidepressants",
-      "run": "cost/antidepressants-R1-d",
-      "picture": "lowmood (engine pick)",
-      "systems": "calibration",
-      "lead": "library:low-mood-as-social-signal",
-      "engine_top": "library:low-mood-as-social-signal",
-      "lead_differs": false,
+      "slug": "a-bassist-miming-to-a-backing-track",
+      "key": "bassist-miming",
+      "slug_from": "launch-set.json",
+      "run": "cost/bassist-miming-R1-sub2",
+      "picture": "none",
+      "systems": "run",
+      "lead": "library:best-of-a-small-group",
+      "engine_top": "mechanism:M6",
+      "lead_differs": true,
+      "claims": 5,
+      "gaps": 0,
       "missing": [
-        "so now what: 4 moves, first 3 shown"
+        "picture: no clip-bank topic fits"
       ]
     },
     {
-      "slug": "birth-rate",
-      "run": "cost/birth-rate-R1-d",
-      "picture": "village (router vote 2/3; the engine kept no clip)",
+      "slug": "a-90-minute-longer-workday-with-ai",
+      "key": "ai-workdays",
+      "slug_from": "launch-set.json",
+      "run": "cost/ai-workdays-R1-sub2",
+      "picture": "none",
+      "systems": "run",
+      "lead": "eea:SUBS",
+      "engine_top": "mechanism:M10",
+      "lead_differs": true,
+      "claims": 5,
+      "gaps": 0,
+      "missing": [
+        "picture: no clip-bank topic fits"
+      ]
+    },
+    {
+      "slug": "nudging-people-to-have-babies",
+      "key": "birth-rate",
+      "slug_from": "launch-set.json",
+      "run": "cost/birth-rate-R1-sub2",
+      "picture": "village (engine pick)",
       "systems": "calibration",
       "lead": "library:conditional-drive-for-children",
       "engine_top": "library:conditional-drive-for-children",
       "lead_differs": false,
-      "missing": [
-        "so now what: 4 moves, first 3 shown"
-      ]
+      "claims": 5,
+      "gaps": 0,
+      "missing": []
     },
     {
-      "slug": "adhd",
-      "run": "cost/adhd-R1-d",
-      "picture": "restless (router vote 2/3; the engine kept no clip)",
-      "systems": "calibration",
-      "lead": "library:restless-temperament-in-a-chair",
-      "engine_top": "library:restless-temperament-in-a-chair",
-      "lead_differs": false,
-      "missing": [
-        "so now what: 4 moves, first 3 shown"
-      ]
-    },
-    {
-      "slug": "gallup-engagement",
-      "run": "cost/gallup-engagement-R1-d",
+      "slug": "a-gene-score-for-picking-embryos",
+      "key": "embryo-screening",
+      "slug_from": "launch-set.json",
+      "run": "cost/embryo-screening-R1-sub2",
       "picture": "none",
       "systems": "calibration",
-      "lead": "library:effort-nobody-sees",
-      "engine_top": "library:effort-nobody-sees",
+      "lead": "library:parent-betting-on-offspring",
+      "engine_top": "library:parent-betting-on-offspring",
       "lead_differs": false,
+      "claims": 5,
+      "gaps": 0,
       "missing": [
-        "picture: no clip-bank topic fits",
-        "so now what: 4 moves, first 3 shown"
+        "picture: no clip-bank topic fits"
       ]
     },
     {
-      "slug": "viral-fear",
-      "run": "cost/viral-fear-R1-t10",
-      "picture": "speaking (engine pick)",
+      "slug": "group-sex-nights-at-the-mansion",
+      "key": "hefner-relevance",
+      "slug_from": "launch-set.json",
+      "run": "cost/hefner-relevance-R1-sub2",
+      "picture": "none",
       "systems": "calibration",
-      "lead": "library:reputation-before-strangers",
-      "engine_top": "library:reputation-before-strangers",
+      "lead": "library:sex-as-a-relevance-display",
+      "engine_top": "library:sex-as-a-relevance-display",
       "lead_differs": false,
+      "claims": 4,
+      "gaps": 0,
       "missing": [
-        "claim list (run predates the claim-list stage)",
-        "so now what: 4 moves, first 3 shown"
+        "picture: no clip-bank topic fits"
       ]
     },
     {
-      "slug": "baristaphobia",
-      "run": "cost/baristaphobia-R1-t10",
-      "picture": "strangers (engine pick)",
+      "slug": "the-first-day-back-from-maternity-leave",
+      "key": "maternity-leave",
+      "slug_from": "launch-set.json",
+      "run": "cost/maternity-leave-R1-sub2",
+      "picture": "none",
       "systems": "calibration",
-      "lead": "library:stranger-wariness",
-      "engine_top": "library:stranger-wariness",
+      "lead": "library:mother-away-from-nursing-infant",
+      "engine_top": "library:mother-away-from-nursing-infant",
       "lead_differs": false,
+      "claims": 4,
+      "gaps": 0,
       "missing": [
-        "claim list (run predates the claim-list stage)",
-        "so now what: 4 moves, first 3 shown"
+        "picture: no clip-bank topic fits"
       ]
     },
     {
-      "slug": "midterm-anxiety",
-      "run": "cost/midterm-anxiety-R1-t10",
-      "picture": "news (engine pick)",
-      "systems": "calibration",
-      "lead": "library:stranger-rulers-no-exit",
-      "engine_top": "library:stranger-rulers-no-exit",
+      "slug": "a-necklace-that-reads-your-emotions",
+      "key": "nirva",
+      "slug_from": "launch-set.json",
+      "run": "cost/nirva-R1-sub2",
+      "picture": "none",
+      "systems": "run",
+      "lead": "library:a-product-made-to-sell-the-seller-and-the-blown-up-cues",
+      "engine_top": "library:a-product-made-to-sell-the-seller-and-the-blown-up-cues",
       "lead_differs": false,
+      "claims": 4,
+      "gaps": 1,
       "missing": [
-        "claim list (run predates the claim-list stage)",
-        "so now what: 4 moves, first 3 shown"
+        "picture: no clip-bank topic fits"
+      ]
+    },
+    {
+      "slug": "a-high-schooler-betting-100-dollars",
+      "key": "sports-betting",
+      "slug_from": "launch-set.json",
+      "run": "cost/sports-betting-R1-sub2",
+      "picture": "betting (engine pick)",
+      "systems": "run",
+      "lead": "library:most-gain-for-the-least-energy",
+      "engine_top": "library:most-gain-for-the-least-energy",
+      "lead_differs": false,
+      "claims": 4,
+      "gaps": 0,
+      "missing": []
+    },
+    {
+      "slug": "a-photo-of-a-split-on-stage",
+      "key": "stage-split",
+      "slug_from": "launch-set.json",
+      "run": "cost/stage-split-R1-sub2",
+      "picture": "none",
+      "systems": "run",
+      "lead": "library:a-product-made-to-sell-the-seller-and-the-blown-up-cues",
+      "engine_top": "library:a-product-made-to-sell-the-seller-and-the-blown-up-cues",
+      "lead_differs": false,
+      "claims": 5,
+      "gaps": 0,
+      "missing": [
+        "picture: no clip-bank topic fits"
+      ]
+    },
+    {
+      "slug": "one-in-four-teens-never-active",
+      "key": "teen-exercise",
+      "slug_from": "launch-set.json",
+      "run": "cost/teen-exercise-R1-sub2",
+      "picture": "none",
+      "systems": "calibration",
+      "lead": "library:energy-budget-nothing-to-move-for",
+      "engine_top": "library:energy-budget-nothing-to-move-for",
+      "lead_differs": false,
+      "claims": 5,
+      "gaps": 0,
+      "missing": [
+        "picture: no clip-bank topic fits"
       ]
     }
   ]
