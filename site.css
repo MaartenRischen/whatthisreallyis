@@ -15,6 +15,8 @@
   --teal: #0E9E86;
   --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
   --serif: "Source Serif 4", Georgia, serif;
+  --wrap: 388px; /* content width: phone 388, tablet 688, desktop 1088 */
+  --gut: 16px;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -23,8 +25,8 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 2px; 
 a:focus-visible, summary:focus-visible { outline: 3px solid var(--cobalt); outline-offset: 2px; }
 
 /* the claim list: the first thing on screen */
-.hero { background: var(--cobalt); color: #fff; padding: 16px 16px 30px; }
-.hero > * { max-width: 388px; margin-left: auto; margin-right: auto; }
+.hero { background: var(--cobalt); color: #fff; padding: 16px var(--gut) 30px; }
+.hero > * { max-width: var(--wrap); margin-left: auto; margin-right: auto; }
 .brand { display: block; font-family: var(--display); font-weight: 700; font-size: 14px; text-decoration: none; opacity: .8; margin-bottom: 22px; }
 .hero a.brand:focus-visible { outline-color: #fff; }
 .claims { list-style: none; padding: 0; }
@@ -34,7 +36,7 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--cobalt); outli
 .claims li:first-child::before { display: none; }
 .claims li:last-child { margin-bottom: 0; }
 
-.col { max-width: 420px; margin: 0 auto; padding: 26px 16px 48px; }
+.col { max-width: calc(var(--wrap) + 2 * var(--gut)); margin: 0 auto; padding: 26px var(--gut) 48px; }
 h1 { font-family: var(--display); font-stretch: 87%; font-weight: 800; font-size: 25px; line-height: 1.1; margin: 0 0 10px; }
 .opening { font-size: 20px; line-height: 1.42; margin: 0 0 12px; }
 .opening strong { font-weight: 650; }
@@ -149,7 +151,7 @@ a.chip:hover { border-color: var(--ink); }
 /* index */
 .hero-index { padding-bottom: 34px; }
 .hero-index .brand { margin-bottom: 16px; }
-.big { font-family: var(--display); font-stretch: 75%; font-weight: 800; font-size: 42px; line-height: 1; margin: 0; text-wrap: balance; }
+.big { font-family: var(--display); font-stretch: 75%; font-weight: 800; font-size: 42px; line-height: 1; margin: 0 auto; text-wrap: balance; }
 .cases { list-style: none; padding: 0; margin: 0 0 24px; }
 .cases a { display: block; text-decoration: none; padding: 16px 0 18px; border-bottom: 2px solid var(--ink); }
 .cases .t { display: block; font-family: var(--display); font-weight: 700; font-size: 13px; color: var(--muted); margin-bottom: 5px; }
@@ -157,7 +159,81 @@ a.chip:hover { border-color: var(--ink); }
 .cases .s { display: block; font-family: var(--display); font-size: 13px; color: var(--muted); margin-top: 7px; }
 .cases a:hover .l { color: var(--cobalt); }
 
-@media (min-width: 700px) {
-  .claims li:first-child { font-size: 44px; }
-  .big { font-size: 52px; }
+/* ---------- wider screens: the phone layout above stays as is below 760px ---------- */
+@media (min-width: 760px) {
+  :root { --wrap: 688px; --gut: 24px; }
+  body { font-size: 18px; }
+  .hero { padding-top: 22px; padding-bottom: 44px; }
+  .brand { font-size: 15px; margin-bottom: 30px; }
+  .claims li { font-size: 32px; }
+  .claims li:first-child { font-size: 52px; margin-bottom: 28px; }
+  .col { padding-top: 40px; padding-bottom: 64px; }
+  h1 { font-size: 32px; }
+  .opening { font-size: 22px; }
+  .source { font-size: 14px; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .clip { margin: 0; }
+  h2 { font-size: 30px; margin-top: 56px; }
+  .vs > div { padding: 20px 20px 22px; }
+  .vs .claim { font-size: 18px; }
+  .ours .claim { font-size: 28px; }
+  .quote { font-size: 15px; }
+  .now li { font-size: 20px; }
+  .know summary h2 { font-size: 24px; }
+  /* index */
+  .hero-index { padding-bottom: 52px; }
+  .big { font-size: 68px; }
+  .cases { display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; }
+  .cases .l { font-size: 25px; }
+}
+
+@media (min-width: 1100px) {
+  :root { --wrap: 1088px; --gut: 32px; }
+  .hero { padding-top: 26px; padding-bottom: 56px; }
+  /* first claim across the top, the rest in a row beneath it */
+  .claims { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0 32px; margin: 0 auto; }
+  .claims li { margin: 0; font-size: 30px; }
+  .claims li:first-child { grid-column: 1 / -1; max-width: 22ch; font-size: 72px; margin-bottom: 36px; }
+  .claims li:last-child { margin-bottom: 0; }
+
+  /* text on the left, the films beside it */
+  .top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); grid-template-rows: auto auto auto auto 1fr; column-gap: 56px; }
+  .top > h1, .top > .opening, .top > .source, .top > .prose { grid-column: 1; }
+  .top > .pair { grid-column: 2; grid-row: 1 / -1; align-self: start; position: sticky; top: 24px; display: block; }
+  .top > .pair .clip { margin: 0 0 18px; }
+  .top > .pair .slot { margin: 0; }
+  h1 { font-size: 40px; }
+  .opening { font-size: 24px; }
+  .prose { max-width: 640px; }
+
+  /* theirs beside ours: wider, bigger type */
+  .vs { gap: 4px; }
+  .vs > div { padding: 28px 30px 30px; }
+  .vs .claim { font-size: 21px; }
+  .ours .claim { font-size: 38px; }
+
+  /* systems graphic beside why it wins */
+  .wins-sec { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 56px; }
+  .wins-sec > h2, .wins-sec > .dek, .wins-sec > .slot { grid-column: 1 / -1; }
+  .wins-sec .dek { max-width: 640px; font-size: 16px; }
+  .wins-sec .graph { grid-column: 1; }
+  .wins-sec .explain { grid-column: 2; padding-top: 22px; }
+  .why { font-size: 18px; padding: 18px 20px; }
+
+  /* three moves side by side */
+  .now ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 28px; }
+  .now li { font-size: 21px; padding-top: 16px; }
+  .now li::before { top: 23px; }
+  .med { max-width: 760px; }
+
+  /* the depth: two columns of claims, sources in two columns */
+  .hdwk { columns: 2; column-gap: 48px; }
+  .hdwk li { break-inside: avoid; }
+  .sources ol { columns: 2; column-gap: 48px; }
+  .sources li { break-inside: avoid; }
+
+  /* index */
+  .big { font-size: 96px; }
+  .cases { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 40px; }
+  .cases a { height: 100%; }
 }
