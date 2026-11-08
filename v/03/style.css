@@ -53,7 +53,7 @@ main{display:block}
 .pics{grid-area:pics}.post{grid-area:post}.nr{grid-area:nr}.claims{grid-area:claims}
 .pics{margin:20px 0 0}
 .pic{margin:0 0 22px}
-.pic h3{font:700 15px/1.2 var(--sans);text-transform:uppercase;letter-spacing:.04em;color:var(--teal);margin:0 0 6px}
+.pic h3{font:700 16.5px/1.2 var(--sans);color:var(--teal);margin:0 0 6px}
 .pic.mm h3{color:var(--red)}
 .pic img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#14110f}
 .pic.pair img{aspect-ratio:auto}
@@ -63,7 +63,7 @@ main{display:block}
 .post{margin:4px 0 0}
 .src{background:var(--card);color:#1d1d1d;border:1px solid var(--oxblood);border-radius:3px;padding:12px;box-shadow:0 2px 0 rgba(58,18,24,.15)}
 .src .shot{display:block;margin:-12px -12px 0;text-decoration:none;color:inherit}
-.src .shot img{width:100%;max-height:1000px;object-fit:cover;object-position:top center;border-bottom:1px solid #ddd;border-radius:2px 2px 0 0}
+.src .shot img{width:100%;max-height:1200px;object-fit:cover;object-position:top center;border-bottom:1px solid #ddd;border-radius:2px 2px 0 0}
 .src .shot.card{border-bottom:1px solid #e3e3e3}
 .tcard{display:flex;flex-direction:column;gap:8px;padding:22px 16px 20px;background:#fff;color:#141414;min-height:100%}
 .t-out{font:700 14px/1.2 var(--sans);color:#141414}
@@ -116,7 +116,7 @@ main{display:block}
 .lead p{font:400 18px/1.5 var(--serif);margin:0 0 .8em}
 .lead .lf b{font-weight:600}
 .lead .srcline{font:400 14px/1.45 var(--sans);color:var(--dim)}.lead .srcline a{color:var(--oxblood)}
-h3.sub{font:700 15px/1.2 var(--sans);text-transform:uppercase;letter-spacing:.04em;color:var(--teal);margin:26px 0 0}
+h3.sub{font:700 16.5px/1.2 var(--sans);color:var(--teal);margin:26px 0 0}
 .ln{background:var(--band);color:var(--cream);margin:10px calc(-1 * var(--gut)) 0;padding:20px var(--gut) 16px}
 .ln-then,.ln-now{font:700 24px/1.06 var(--narrow);text-align:center;text-wrap:balance;margin:0 0 14px}
 .ln-now{font-size:26px;margin:14px 0 10px}
@@ -170,7 +170,7 @@ h3.sub{font:700 15px/1.2 var(--sans);text-transform:uppercase;letter-spacing:.04
 .row.win .seg.at_stake{background:#fff6e4}
 .row.win .seg.details{background:#5fb3a8}
 .row.win .seg.distance{background:var(--ring)}
-.wtag{display:inline-block;font:800 12px/1 var(--sans);text-transform:uppercase;letter-spacing:.06em;color:var(--oxblood);background:var(--coral);padding:4px 6px 3px;margin-left:4px;vertical-align:2px}
+.wtag{display:inline-block;font:800 13px/1 var(--sans);color:var(--oxblood);background:var(--coral);padding:4px 6px 3px;margin-left:4px;vertical-align:2px}
 .sys .why{font:600 18px/1.4 var(--serif);margin:14px 0 0}
 .sys .formula{font:400 12.5px/1.45 var(--sans);color:var(--dim);margin:8px 0 0}
 
@@ -270,14 +270,19 @@ body.index main{max-width:var(--col);margin:0 auto;padding:22px var(--gut) 10px}
   .hd .sum{font-size:clamp(20px,1.9vw,24px);max-width:52ch}
   .hd .sum{border-bottom:0;padding-bottom:0}
   .hd::after{content:"";display:block;border-bottom:1px solid var(--oxblood);margin-top:20px}
-  /* tablet: the pictures with not / really under them (.mid) beside the post, the claims across below */
-  .top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"mid post" "claims claims";grid-template-rows:auto auto;column-gap:36px;align-items:start}
+  /* tablet: the pictures, not / really and the claims down the left, the post on the right (held in view by page.js) */
+  .top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"mid post" "claims post";grid-template-rows:auto 1fr;column-gap:36px;align-items:start}
   .mid{display:block;grid-area:mid}
   .pics{grid-area:pics}.post{grid-area:post;margin-top:20px}.nr{grid-area:nr}.claims{grid-area:claims}
   .top.short-post{grid-template-areas:"pics post" "pics nr" "claims claims";grid-template-rows:auto 1fr auto}
   .top.short-post .nr{margin-top:26px;display:block}
   .top.short-post .nr ul+h2{margin-top:16px}
-  .claims ol{display:grid;grid-template-columns:1fr 1fr;column-gap:36px}
+  /* page.js marks the side-by-side columns with data-st and sets --st: a column scrolls until its end is in view, then
+     holds there while the longest column finishes, so none shows an empty stretch. Without JS they simply scroll.
+     Chrome bounds a sticky grid item by the whole grid, not its row, so only items that span every row get it:
+     the post on a tablet, all three columns from 1180 up. */
+  .top [data-st]{position:sticky;top:var(--st,16px);align-self:start}
+  .top.short-post .claims ol{display:grid;grid-template-columns:1fr 1fr;column-gap:36px}
   .stats{grid-template-columns:repeat(4,1fr)}
   .cta a.btn{width:auto}
   .mxs{column-count:2;column-gap:44px}.mxs .mx{break-inside:avoid;margin:0;padding-top:18px}
@@ -318,13 +323,10 @@ body.index main{max-width:var(--col);margin:0 auto;padding:22px var(--gut) 10px}
   .top{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr) minmax(0,1fr);grid-template-areas:"claims mid post";grid-template-rows:auto;column-gap:40px}
   .nr{display:block}.nr ul+h2{margin-top:16px}
   .top.short-post{grid-template-rows:auto 1fr}
-  /* page.js marks the three columns with data-st and sets --st: a column scrolls until its end is in view, then holds
-     there while the longest column finishes, so none shows an empty stretch. Without JS the columns simply scroll.
-     (Chrome bounds a sticky grid item by the whole grid, not its row, so this only works with one row: 1180 up.) */
-  .top [data-st]{position:sticky;top:var(--st,16px);align-self:start}
+
   .top.short-post{grid-template-areas:"claims pics post" "claims pics nr"}
   .claims{margin-top:20px;border-top:0;padding-top:0}
-  .claims ol{display:block}
+  .claims ol,.top.short-post .claims ol{display:block}
   .claims h2{font-size:22px}
   .claims li{padding:10px 0 10px 30px}
   .claims .cl{font-size:15.5px}

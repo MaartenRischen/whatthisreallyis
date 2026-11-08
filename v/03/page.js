@@ -27,14 +27,14 @@
     });
   }
   if (vs.length) { const loop = (ms) => { rings(still ? 0 : ms / 1000); requestAnimationFrame(loop); }; requestAnimationFrame(loop); }
-  // wide screens: the three top columns hold once their end is in view ([data-st] in style.css), so the shorter
-  // columns never show an empty stretch while the longest one finishes
+  // tablet and wide screens: the side-by-side top columns hold once their end is in view ([data-st] in style.css),
+  // so a shorter column never shows an empty stretch while the longest one finishes
   const top = document.querySelector('.top:not(.short-post)');
   if (top && window.matchMedia && window.ResizeObserver) {
-    const wide = matchMedia('(min-width:1180px)');
+    const tab = matchMedia('(min-width:760px)'), wide = matchMedia('(min-width:1180px)');
     const all = [...top.children].filter((e) => e.matches('.mid,.post,.claims'));
     const fit = () => all.forEach((e) => {
-      if (wide.matches) { e.style.setProperty('--st', `${Math.min(16, innerHeight - e.offsetHeight - 16)}px`); e.dataset.st = ''; }
+      if (wide.matches || (tab.matches && e.classList.contains('post'))) { e.style.setProperty('--st', `${Math.min(16, innerHeight - e.offsetHeight - 16)}px`); e.dataset.st = ''; }
       else delete e.dataset.st;
     });
     const ro = new ResizeObserver(fit); all.forEach((e) => ro.observe(e));
