@@ -230,6 +230,13 @@ details.ph-cor[open]{padding:4px 12px 11px;background:rgba(255,255,255,.42);bord
 [data-fold].is-shut>:not([data-fold-head]){display:none !important}
 .ph-line h2{margin:0 0 10px}
 .ph-verdict.is-shut .ph-lab{margin-bottom:0}
+
+/* 10 Nov (parental burnout, celebrity): long labels break with a hyphen instead of mid-word, and a plain case card
+   for a number or a description that is not a quote */
+.ph-they{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:normal}
+.ph-card{margin:0;padding:14px 16px 15px;background:#fff;border:1px solid var(--oxblood);border-radius:4px;box-shadow:0 2px 0 rgba(58,18,24,.15)}
+.ph-card .b{font:800 24px/1.15 var(--sans);letter-spacing:-.015em;color:var(--oxblood);margin:0;text-wrap:balance}
+.ph-card .s{font:500 15px/1.35 var(--serif);color:var(--dim);margin:6px 0 0}
 </style>
 </head>
 <body class="ph">
