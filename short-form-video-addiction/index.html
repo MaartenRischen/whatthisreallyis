@@ -222,6 +222,14 @@ details.ph-cor[open]{padding:4px 12px 11px;background:rgba(255,255,255,.42);bord
   .ph-cases h2{column-span:all}
   .ph-case{break-inside:avoid}
 }
+
+/* v5: every block folds from its heading, open by default */
+[data-fold-head]{cursor:pointer;-webkit-tap-highlight-color:transparent}
+[data-fold-head]:focus-visible{outline:2px solid var(--teal);outline-offset:4px;border-radius:3px}
+.ph-tg{display:inline-block;margin-left:10px;width:22px;height:22px;border:1.5px solid currentColor;border-radius:50%;font:700 16px/19px var(--sans);text-align:center;vertical-align:middle;opacity:.7}
+[data-fold].is-shut>:not([data-fold-head]){display:none !important}
+.ph-line h2{margin:0 0 10px}
+.ph-verdict.is-shut .ph-lab{margin-bottom:0}
 </style>
 </head>
 <body class="ph">
@@ -232,13 +240,13 @@ details.ph-cor[open]{padding:4px 12px 11px;background:rgba(255,255,255,.42);bord
 <div class="ph-top">
 <div class="ph-lead">
 <header class="ph-hd"><p class="ph-wri">What really is:</p><h1>Short form video addiction</h1></header>
-<section class="ph-verdict" aria-label="What it really is"><p class="ph-lab">What it really is</p><p class="ph-big">People-watching.</p><p class="ph-rest">Humans are built to watch other humans, and the feed is an endless supply of people who will never know you.</p></section>
-<section class="ph-line line" aria-label="Then and now">
+<section class="ph-verdict" data-fold aria-label="What it really is"><p class="ph-lab" data-fold-head>What it really is</p><p class="ph-big">People-watching.</p><p class="ph-rest">Humans are built to watch other humans, and the feed is an endless supply of people who will never know you.</p></section>
+<section class="ph-line line" data-fold aria-labelledby="tn"><h2 id="tn" data-fold-head>Then and now</h2>
 <div class="ln" data-line="compare"><p class="ln-then">For 300,000 years, the people you watched lived in your camp.</p><div class="film"><video class="clip" data-topic="compare" data-part="then" data-signal="1" data-track="../tracks/compare.json" src="../media/compare-then.mp4" poster="../media/compare-then.jpg" muted playsinline autoplay loop preload="metadata" aria-label="For 300,000 years, the people you watched lived in your camp."></video><canvas aria-hidden="true"></canvas></div><canvas class="band" aria-hidden="true"></canvas><div class="film now"><video class="clip" data-topic="compare" data-part="now" data-signal="1" data-track="../tracks/compare.json" src="../media/compare-now.mp4" poster="../media/compare-now.jpg" muted playsinline autoplay loop preload="metadata" aria-label="Not being able to stop watching is completely normal."></video><canvas aria-hidden="true"></canvas></div><p class="ln-now">Not being able to stop watching is completely normal.</p>
 <p class="ln-src">Sources: EEA-SOC-03; EEA-INFO-02. Time scale: Hublin et al. 2017; Richter et al. 2017.<span class="key"><i></i>Gold rings: the alarm is on</span></p></div>
 <p class="go"><a href="https://maartenrischen.github.io/demismatch-then-now-preview/#compare" rel="noopener">See the whole line</a>: 11,100 generations of your ancestors, then you.</p></section>
 </div>
-<section class="ph-chain" aria-labelledby="ch"><h2 id="ch">How it happens</h2><ol>
+<section class="ph-chain" data-fold aria-labelledby="ch"><h2 id="ch" data-fold-head>How it happens</h2><ol>
 <li class="ph-link"><span class="ph-n">1</span><p class="ph-s">Humans are built to watch other humans.</p><span class="ph-g"><svg viewBox="0 0 96 96" aria-hidden="true"><line x1="48" y1="48" x2="48.0" y2="12.0" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="71.1" y2="20.4" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="83.5" y2="41.7" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="79.2" y2="66.0" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="60.3" y2="81.8" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="35.7" y2="81.8" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="16.8" y2="66.0" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="12.5" y2="41.7" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="24.9" y2="20.4" stroke="#2d6b6b" stroke-width="1.4"/><circle cx="48.0" cy="12.0" r="6.4" fill="#2d6b6b"/><circle cx="71.1" cy="20.4" r="6.4" fill="#2d6b6b"/><circle cx="83.5" cy="41.7" r="6.4" fill="#2d6b6b"/><circle cx="79.2" cy="66.0" r="6.4" fill="#2d6b6b"/><circle cx="60.3" cy="81.8" r="6.4" fill="#2d6b6b"/><circle cx="35.7" cy="81.8" r="6.4" fill="#2d6b6b"/><circle cx="16.8" cy="66.0" r="6.4" fill="#2d6b6b"/><circle cx="12.5" cy="41.7" r="6.4" fill="#2d6b6b"/><circle cx="24.9" cy="20.4" r="6.4" fill="#2d6b6b"/><circle cx="48" cy="48" r="8.5" fill="#3a1218"/></svg></span>
 <details class="ph-cor"><summary><svg class="rings" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><circle cx="13.2" cy="13.2" r="7.6"/><circle cx="14.4" cy="14.4" r="4.4"/><circle class="dot" cx="15.4" cy="15.4" r="2.1"/></svg>The science says</summary><p class="ph-says">In every camp, talk about who did what was the main flow of information. It is how people learned the rules and kept track of each other.</p><p class="ev"><span class="eg"><svg class="gm gm-many" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><rect x="1" y="1" width="8" height="8"/></svg><span class="gl">tested many times</span><a href="https://cor.demismatch.com/the-gap.html#EEA-INFO-02" rel="noopener" title="Gossip and story as the main information flow">EEA-INFO-02 <span class="ref">Gossip and story as the main information flow</span></a></span><span class="eg"><svg class="gm gm-many" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><rect x="1" y="1" width="8" height="8"/></svg><span class="gl">tested many times</span><a href="https://cor.demismatch.com/corpus.html#w=9" rel="noopener" title="Boehm">E373 <span class="ref">Boehm</span></a></span><span class="eg"><svg class="gm gm-once" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><rect class="o" x="1" y="1" width="8" height="8"/><rect x="1" y="5" width="8" height="4"/></svg><span class="gl">tested once</span><a href="https://cor.demismatch.com/corpus.html#w=209" rel="noopener" title="Wiessner 2014, one population">E720 <span class="ref">Wiessner 2014, one population</span></a></span></p></details></li>
 <li class="ph-link"><span class="ph-so">so</span><span class="ph-n">2</span><p class="ph-s">The people you would watch used to live around you. Now you are often alone.</p><span class="ph-g"><svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="48.0" cy="12.0" r="5.6" fill="none" stroke="#3a1218" stroke-opacity=".42" stroke-width="1.5" stroke-dasharray="2.6 2.6"/><circle cx="71.1" cy="20.4" r="5.6" fill="none" stroke="#3a1218" stroke-opacity=".42" stroke-width="1.5" stroke-dasharray="2.6 2.6"/><circle cx="83.5" cy="41.7" r="5.6" fill="none" stroke="#3a1218" stroke-opacity=".42" stroke-width="1.5" stroke-dasharray="2.6 2.6"/><circle cx="79.2" cy="66.0" r="5.6" fill="none" stroke="#3a1218" stroke-opacity=".42" stroke-width="1.5" stroke-dasharray="2.6 2.6"/><circle cx="60.3" cy="81.8" r="5.6" fill="none" stroke="#3a1218" stroke-opacity=".42" stroke-width="1.5" stroke-dasharray="2.6 2.6"/><circle cx="35.7" cy="81.8" r="5.6" fill="none" stroke="#3a1218" stroke-opacity=".42" stroke-width="1.5" stroke-dasharray="2.6 2.6"/><circle cx="16.8" cy="66.0" r="5.6" fill="none" stroke="#3a1218" stroke-opacity=".42" stroke-width="1.5" stroke-dasharray="2.6 2.6"/><circle cx="12.5" cy="41.7" r="5.6" fill="none" stroke="#3a1218" stroke-opacity=".42" stroke-width="1.5" stroke-dasharray="2.6 2.6"/><circle cx="24.9" cy="20.4" r="5.6" fill="none" stroke="#3a1218" stroke-opacity=".42" stroke-width="1.5" stroke-dasharray="2.6 2.6"/><circle cx="48" cy="48" r="8.5" fill="#3a1218"/></svg></span>
@@ -252,13 +260,13 @@ details.ph-cor[open]{padding:4px 12px 11px;background:rgba(255,255,255,.42);bord
 </ol></section>
 </div>
 <div class="ph-mid">
-<section class="ph-cases" aria-labelledby="cs"><h2 id="cs">Real example cases</h2>
+<section class="ph-cases" data-fold aria-labelledby="cs"><h2 id="cs" data-fold-head>Real example cases</h2>
 <article class="ph-case"><figure><img src="source.jpg" alt="Screenshot of a post on X by PoliMath: a parent describes blocking YouTube on every device, after which his teenagers started watching short videos on Spotify." width="780"></figure><p class="ph-who">A parent on X, 10 November 2026</p><p class="ph-sub">He blocked YouTube at the router and his kids found short videos on Spotify. Take one supply away and the wanting moves to the next.</p></article>
 <article class="ph-case"><blockquote>watching out of pure addiction and not even deriving pleasure from it</blockquote><p class="ph-who"><a href="https://dailytarheel.com/article/2024/11/opinion-my-journey-short-form-content" rel="noopener">Teo Almaguer, student, in The Daily Tar Heel</a>, 14 November 2024</p><p class="ph-sub">Wanting without enjoying, in his own words. Those are two separate systems, and the feed only feeds the first.</p></article>
 <article class="ph-case"><blockquote>It was at least five hours a day. It was mad</blockquote><p class="ph-who"><a href="https://www.irishtimes.com/life-style/2023/09/16/teens-talk-tiktok-i-was-on-it-way-too-much-at-least-five-hours-a-day-it-was-mad" rel="noopener">Zach Garvey, 17, in The Irish Times</a>, 16 September 2023</p><p class="ph-sub">He calls his own hours mad. The wanting runs without asking him.</p></article>
 <article class="ph-case"><blockquote>I spend a few hours each day watching such videos. As a retired factory worker, I have plenty of spare time, so why not?</blockquote><p class="ph-who"><a href="https://www.sixthtone.com/news/1006348/chinese-want-online-parental-controls-%E2%80%94-for-their-own-parents" rel="noopener">Li Xuejun, 71, in Sixth Tone</a>, 26 October 2020</p><p class="ph-sub">This is no teenage problem. An empty day gets filled the same way at 71.</p></article>
 </section>
-<section class="ph-vs" aria-label="What they say it is, and what it really is"><div class="ph-vs-h"><span class="t">What they say it is</span><span class="w">What it really is</span></div>
+<section class="ph-vs" data-fold aria-label="What they say it is, and what it really is"><div class="ph-vs-h" data-fold-head><span class="t">What they say it is</span><span class="w">What it really is</span></div>
 <div class="ph-row"><p class="ph-they">An addiction</p><p class="ph-really">No drug, no test. A working appetite for people.</p></div>
 <div class="ph-row"><p class="ph-they">Brain rot</p><p class="ph-really">The content is other humans. Brains are built for that.</p></div>
 <div class="ph-row"><p class="ph-they">Weak willpower</p><p class="ph-really">The oldest parts of the brain cannot tell those people are not in the room.</p></div>
@@ -266,7 +274,7 @@ details.ph-cor[open]{padding:4px 12px 11px;background:rgba(255,255,255,.42);bord
 </section>
 </div>
 <div class="ph-cor2">
-<section class="ph-bw" aria-labelledby="bw-h"><h2 id="bw-h">Which system wins</h2><div class="ph-brain"><svg class="ph-brain-svg" viewBox="30 14 380 322" role="img" aria-label="A brain cut down the middle. 1, at the core and running down: the brainstem and hypothalamus, the oldest part. 2, the ring around it: the limbic system. 3, the outer layer: the cortex, the newest part.">
+<section class="ph-bw" data-fold aria-labelledby="bw-h"><h2 id="bw-h" data-fold-head>Which system wins</h2><div class="ph-brain"><svg class="ph-brain-svg" viewBox="30 14 380 322" role="img" aria-label="A brain cut down the middle. 1, at the core and running down: the brainstem and hypothalamus, the oldest part. 2, the ring around it: the limbic system. 3, the outer layer: the cortex, the newest part.">
 <defs>
 <linearGradient id="phb-cx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0dfae"/><stop offset="1" stop-color="#dcc07a"/></linearGradient>
 <linearGradient id="phb-lb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f8a88"/><stop offset="1" stop-color="#235656"/></linearGradient>
@@ -302,7 +310,7 @@ details.ph-cor[open]{padding:4px 12px 11px;background:rgba(255,255,255,.42);bord
 <circle cx="180" cy="56" r="14" fill="#f4ecd9" stroke="#3a1218" stroke-width="2.4"/><text x="180" y="61.5" fill="#3a1218">3</text>
 </g>
 </svg><ol><li><i class="n1">1</i><p class="bn"><b>Oldest. Brainstem and hypothalamus</b>, about 500 million years old</p><p class="bd">Wanting, energy, sex. Cannot learn that a screen is a screen.</p><p class="br"><span class="">Wanting with nothing to finish it</span><span class="">The money check: a feed built to have no end</span><span class="">Most gain for the least energy</span><span class="">Attractive strangers on tap</span></p></li><li><i class="n2">2</i><p class="bn"><b>Limbic system</b>, about 200 million years old</p><p class="bd">Bonding with other people.</p><p class="br"><span class="win">Watching people who will never know you <b class="wtag">Wins</b></span></p></li><li><i class="n3">3</i><p class="bn"><b>Newest. Cortex</b>, about 50 to 100 million years old</p><p class="bd">Keeping track of where you stand.</p><p class="br"><span class="">Ranking yourself against everyone alive</span></p></li></ol><p class="ph-brain-n">Simplified. The older the system, the harder its signal hits and the less it can learn that the people on a screen are not in the room.</p></div></section>
-<section class="sys" aria-labelledby="sys-h"><h2 id="sys-h">The scores</h2><p class="dek">Every brain system that could explain this, oldest at the top. The longer the bar, the more of the phenomenon it explains.</p>
+<section class="sys" data-fold aria-labelledby="sys-h"><h2 id="sys-h" data-fold-head>The scores</h2><p class="dek">Every brain system that could explain this, oldest at the top. The longer the bar, the more of the phenomenon it explains.</p>
 <p class="legend"><span><i class="sw at_stake"></i>What is at stake</span><span><i class="sw details"></i>Details explained</span><span><i class="sw distance"></i>Distance from the camp</span><span><svg class="dots" viewBox="0 0 17 10" width="17" height="10" aria-hidden="true"><circle cx="3.5" cy="5" r="2.4" class="d-on"/><circle cx="10.5" cy="5" r="2.4" class="d-off"/></svg>The 11 details of the phenomenon</span></p>
 <ol class="rows" style="--step:16.6667%"><li class="row scl" aria-hidden="true"><span class="age"></span><span class="lab"></span><div class="bar"><span class="track"><i style="left:0.000%">0</i><i style="left:16.667%">0.1</i><i style="left:33.333%">0.2</i><i style="left:50.000%">0.3</i><i style="left:66.667%">0.4</i><i style="left:83.333%">0.5</i><i style="left:100.000%">0.6</i></span><b class="sc">0.00</b></div></li>
 <li class="row">
@@ -349,7 +357,7 @@ details.ph-cor[open]{padding:4px 12px 11px;background:rgba(255,255,255,.42);bord
 </li></ol>
 <p class="why">Why it wins. Watching people who will never know you explains 7 of the 11 details and sits on standing. Attractive strangers on tap scores higher (0.58) but only explains part of what is watched, not why people watch for hours.</p><p class="formula">Score = 0.571 x what is at stake (survival 1, reproduction 0.67, standing 0.33) + 0.286 x share of details explained + 0.143 x distance from the camp. Phylogenetic age adds no points; it orders the stack and settles near-ties.</p>
 <details class="ph-facts"><summary>The 11 details</summary><ol><li>People watch for hours a day.</li><li>Many say they cannot stop.</li><li>They feel worse afterwards.</li><li>The videos are of people.</li><li>Nobody in the feed knows the viewer.</li><li>It mostly happens alone, often in bed at night.</li><li>Each video costs one swipe.</li><li>The feed has no end and is tuned to each viewer.</li><li>It is free to watch; advertisers pay.</li><li>Block one app and people move to the next.</li><li>Teenagers do it most visibly.</li></ol></details></section>
-<section class="how" aria-labelledby="how-h"><h2 id="how-h">How do we know?</h2>
+<section class="how" data-fold aria-labelledby="how-h"><h2 id="how-h" data-fold-head>How do we know?</h2>
 <dl class="stats"><div><dt>658</dt><dd>graded findings in Cor</dd></div><div><dt>159</dt><dd>studies and books</dd></div><div><dt>13</dt><dd>Cor records cited on this page</dd></div><div><dt>5</dt><dd>Cor systems at work here</dd></div></dl>
 <p class="cta"><a class="btn" href="https://cor.demismatch.com/" rel="noopener">Explore the atlas</a><a href="https://cor.demismatch.com/corpus.html" rel="noopener">All 159 works</a><a href="https://cor.demismatch.com/mechanisms.html" rel="noopener">All mechanisms</a></p>
 <details class="ph-mech"><summary><span>This phenomenon in Cor</span> <span class="cnt">5 systems, each with its grade and age</span></summary><div class="mxs"><article class="mx is-win"><h4><span class="code">M3</span>Social Bonding</h4>
@@ -387,11 +395,23 @@ details.ph-cor[open]{padding:4px 12px 11px;background:rgba(255,255,255,.42);bord
 <p class="ph-fine">Grades are Cor's. Every id opens its Cor page. The scores in the graph were worked out by hand with the engine's formula, not by an engine run.</p></section>
 </div>
 <div class="ph-bot">
-<section class="ph-now" aria-labelledby="nw"><h2 id="nw">So now what</h2><ol><li>Fill the evening first. A blocked app leaves the same empty hours.</li><li>Watch together and talk about it.</li><li>Screens are fine when the people on them know you.</li></ol></section>
-<section class="ph-wrong" aria-labelledby="wr"><h2 id="wr">What would prove this wrong</h2><p class="ph-test">If people who have company every evening scroll as much as people who are alone, this page is wrong.</p><p class="ph-note">Cor holds no study of that yet.</p><p class="ph-obj"><b>Strongest objection</b>Adults with full lives scroll for hours too.</p></section>
+<section class="ph-now" data-fold aria-labelledby="nw"><h2 id="nw" data-fold-head>So now what</h2><ol><li>Fill the evening first. A blocked app leaves the same empty hours.</li><li>Watch together and talk about it.</li><li>Screens are fine when the people on them know you.</li></ol></section>
+<section class="ph-wrong" data-fold aria-labelledby="wr"><h2 id="wr" data-fold-head>What would prove this wrong</h2><p class="ph-test">If people who have company every evening scroll as much as people who are alone, this page is wrong.</p><p class="ph-note">Cor holds no study of that yet.</p><p class="ph-obj"><b>Strongest objection</b>Adults with full lives scroll for hours too.</p></section>
 </div>
 <p class="ph-share"><a href="../">All decodes</a><a href="https://cor.demismatch.com">Open Cor</a><span class="u">whatreally.is/short-form-video-addiction</span></p>
 </main>
 <footer class="ft"><p>Every claim traces to Cor, the evidence atlas at <a href="https://cor.demismatch.com">cor.demismatch.com</a>. Part of <a href="https://demismatch.com">Demismatch</a>.</p><p class="nmd">So now what: general suggestions, not medical advice.</p></footer>
+<script>
+// every block folds: tap its heading. All open by default; with no script nothing folds and everything shows.
+document.querySelectorAll('[data-fold]').forEach(function (sec) {
+  var h = sec.querySelector('[data-fold-head]'); if (!h) return;
+  var m = document.createElement('span'); m.className = 'ph-tg'; m.setAttribute('aria-hidden', 'true'); m.textContent = '−';
+  (h.classList.contains('ph-vs-h') ? h.lastElementChild : h).appendChild(m);
+  h.setAttribute('role', 'button'); h.setAttribute('tabindex', '0'); h.setAttribute('aria-expanded', 'true');
+  function flip() { var shut = sec.classList.toggle('is-shut'); h.setAttribute('aria-expanded', String(!shut)); m.textContent = shut ? '+' : '−'; }
+  h.addEventListener('click', flip);
+  h.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
+});
+</script>
 <script src="../page.js" defer></script><script src="../line-band.js" defer></script>
 </body></html>
