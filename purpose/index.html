@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex"><title>What Really Is: Purpose</title>
+<meta name="description" content="What lack of purpose really is: a drive built for real tasks with visible results, left idle after a long goal is reached or work ends.">
+<meta property="og:type" content="article"><meta property="og:site_name" content="whatreally.is"><meta property="og:title" content="What Really Is: Purpose"><meta property="og:description" content="What lack of purpose really is: a drive built for real tasks with visible results, left idle after a long goal is reached or work ends."><meta property="og:url" content="https://whatreally.is/purpose/">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="What Really Is: Purpose"><meta name="twitter:description" content="What lack of purpose really is: a drive built for real tasks with visible results, left idle after a long goal is reached or work ends.">
+<link rel="icon" href="data:,"><link rel="stylesheet" href="../style.css">
+<style>
+/* Phenomenon pages on whatreally.is (10 Nov 2026). Loaded after ../style.css, which supplies the fonts,
+   the colour tokens, the doors nav, the Cor strip and the footer. Everything here is prefixed ph-. */
+.ph-wrap{max-width:560px;margin:0 auto;padding:0 16px}
+.ph-wrap h2{font:800 22px/1.1 var(--sans);letter-spacing:-.012em;margin:0 0 14px}
+
+/* title: the anchor, then the thing */
+.ph-hd{padding:26px 0 18px}
+.ph-wri{font:italic 500 27px/1 var(--serif);color:var(--teal);margin:0 0 6px}
+.ph-hd h1{font:800 47px/.97 var(--sans);letter-spacing:-.028em;margin:0;text-wrap:balance}
+
+/* the verdict */
+.ph-verdict{background:var(--oxblood);color:#fff6e4;border-radius:6px;padding:20px 20px 22px;box-shadow:6px 6px 0 var(--teal)}
+.ph-lab{font:700 14px/1.2 var(--sans);color:var(--coral);margin:0 0 8px}
+.ph-big{font:800 41px/1 var(--sans);letter-spacing:-.025em;margin:0 0 12px}
+.ph-rest{font:500 20px/1.34 var(--serif);margin:0;text-wrap:pretty}
+
+/* the chain */
+.ph-chain{padding-top:44px}
+.ph-chain ol{list-style:none;margin:0;padding:0}
+.ph-link{position:relative;display:grid;grid-template-columns:44px minmax(0,1fr) 78px;column-gap:14px;align-items:start;padding:0 0 34px}
+.ph-link::before{content:"";position:absolute;left:21px;top:44px;bottom:0;width:2px;background:var(--oxblood)}
+.ph-link:last-child{padding-bottom:0}.ph-link:last-child::before{display:none}
+.ph-n{grid-column:1;width:44px;height:44px;border-radius:50%;background:var(--oxblood);color:var(--parchment);font:800 21px/44px var(--sans);text-align:center;position:relative;z-index:1}
+.ph-so{position:absolute;left:0;top:-27px;width:44px;text-align:center;font:italic 500 17px/20px var(--serif);color:var(--oxblood);background:var(--parchment);z-index:1}
+.ph-s{grid-column:2;font:800 21px/1.17 var(--sans);letter-spacing:-.012em;margin:3px 0 0;text-wrap:pretty}
+.ph-g{grid-column:3;grid-row:1/span 2;width:78px;height:78px}
+.ph-g svg{display:block;width:100%;height:100%}
+.ph-loop{grid-column:2/span 2;display:inline-flex;align-items:center;gap:7px;justify-self:start;margin:10px 0 0;padding:5px 12px 5px 8px;border-radius:99px;background:var(--red);color:#fff;font:700 14.5px/1.2 var(--sans)}
+.ph-loop svg{width:17px;height:17px;flex:none}
+.ph-cor{grid-column:2/span 2;margin:10px 0 0}
+.ph-cor summary{display:inline-flex;align-items:center;gap:6px;cursor:pointer;list-style:none;font:700 14px/1.2 var(--sans);color:var(--teal);padding:5px 0}
+.ph-cor summary::-webkit-details-marker{display:none}
+.ph-cor summary .rings{width:16px;height:16px;stroke:var(--teal)}
+.ph-cor summary::after{content:"+";font:700 16px/1 var(--sans)}
+.ph-cor[open] summary::after{content:"\2212"}
+.ph-cor summary:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:3px}
+.ph-says{font:500 16.5px/1.42 var(--serif);margin:4px 0 8px;text-wrap:pretty}
+.ph-ev{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.ph-ev li{font:500 13.5px/1.35 var(--sans);display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.ph-ev a{color:var(--oxblood);text-decoration-thickness:1px;text-underline-offset:2px}
+.ph-ev .id{font-weight:700}
+.ph-gap{font:italic 500 15px/1.4 var(--serif);color:var(--dim);margin:8px 0 0}
+
+/* grade chips: a mark plus the words, never colour alone */
+.ph-chip{display:inline-flex;align-items:center;gap:5px;font:700 12px/1 var(--sans);padding:3px 7px 3px 5px;border:1px solid var(--oxblood);border-radius:3px;white-space:nowrap;background:rgba(255,255,255,.4)}
+.ph-chip i{display:block;width:9px;height:9px;border:1.5px solid var(--oxblood);box-sizing:border-box}
+.ph-chip.many i{background:var(--oxblood)}
+.ph-chip.once i{background:linear-gradient(to top,var(--oxblood) 50%,transparent 50%)}
+.ph-chip.animals i{border-radius:50%;background:var(--oxblood)}
+.ph-chip.argued i{background:transparent}
+.ph-chip.contested i{background:linear-gradient(135deg,transparent 43%,var(--oxblood) 43%,var(--oxblood) 57%,transparent 57%)}
+
+/* what they say it is / what it really is */
+.ph-vs{padding-top:48px}
+.ph-vs-h,.ph-row{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:16px}
+.ph-vs-h{padding:0 0 9px;border-bottom:2px solid var(--oxblood)}
+.ph-vs-h span{font:800 15px/1.15 var(--sans)}
+.ph-vs-h .t{color:var(--red)}.ph-vs-h .w{color:var(--teal)}
+.ph-row{padding:14px 0;border-bottom:1px solid var(--rule);align-items:start}
+.ph-they{font:800 21px/1.12 var(--sans);letter-spacing:-.012em;color:var(--red);text-decoration:line-through;text-decoration-thickness:2.5px;text-decoration-color:var(--oxblood);overflow-wrap:anywhere}
+.ph-really{font:500 18px/1.34 var(--serif);text-wrap:pretty}
+
+/* what would prove this wrong */
+.ph-wrong{margin-top:48px !important;border:2px solid var(--oxblood);border-radius:6px;padding:18px 18px 20px;background:rgba(255,255,255,.38);box-shadow:6px 6px 0 var(--bar-gold)}
+.ph-wrong h2{margin-bottom:10px}
+.ph-test{font:500 19px/1.36 var(--serif);margin:0;text-wrap:pretty}
+.ph-note{font:italic 500 15.5px/1.4 var(--serif);color:var(--dim);margin:6px 0 0}
+.ph-obj{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--rule);font:500 17px/1.38 var(--serif)}
+.ph-obj b{display:block;font:700 13.5px/1.2 var(--sans);color:var(--gold);margin:0 0 4px}
+
+/* so now what */
+.ph-now{padding-top:48px}
+.ph-now ol{list-style:none;counter-reset:n;margin:0;padding:0;border-top:2px solid var(--oxblood)}
+.ph-now li{counter-increment:n;position:relative;padding:14px 0 14px 50px;border-bottom:1px solid var(--rule);font:700 19px/1.24 var(--sans);letter-spacing:-.008em;text-wrap:pretty}
+.ph-now li::before{content:counter(n);position:absolute;left:0;top:11px;width:36px;height:36px;border-radius:50%;background:var(--teal);color:#fff;font:800 17px/36px var(--sans);text-align:center}
+
+/* seen in the wild */
+.ph-src{padding-top:48px}
+.ph-src figure{margin:0;background:#fff;border:1px solid var(--oxblood);border-radius:4px;overflow:hidden;box-shadow:0 2px 0 rgba(58,18,24,.15)}
+.ph-src img{width:100%;height:auto}
+.ph-cap{font:500 16px/1.4 var(--serif);margin:10px 0 0;text-wrap:pretty}
+
+/* every record */
+.ph-all{padding-top:40px}
+.ph-all details{border-top:2px solid var(--oxblood);border-bottom:1px solid var(--rule)}
+.ph-all summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0;font:800 18px/1.2 var(--sans)}
+.ph-all summary::-webkit-details-marker{display:none}
+.ph-all summary::after{content:"+";font:700 22px/1 var(--sans);color:var(--teal)}
+.ph-all details[open] summary::after{content:"\2212"}
+.ph-all .ph-ev{padding:0 0 16px;gap:9px}
+.ph-all p{font:500 15.5px/1.42 var(--serif);color:var(--dim);margin:0 0 14px}
+
+.ph-share{margin:34px 0 0;padding:14px 0 0;border-top:1px solid var(--rule);font:500 14.5px/1.4 var(--sans);display:flex;flex-wrap:wrap;gap:6px 18px}
+.ph-share a{color:var(--teal);font-weight:700}
+.ph-share .u{color:var(--dim);overflow-wrap:anywhere}
+
+/* desktop: use the width. Lead beside the chain, the table beside the test and the moves. */
+@media (min-width:1000px){
+  .ph-wrap{max-width:1200px;padding:0 32px}
+  .ph-top{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);column-gap:72px;align-items:start}
+  .ph-lead{position:sticky;top:24px}
+  .ph-hd{padding-top:44px}
+  .ph-hd h1{font-size:76px}
+  .ph-wri{font-size:36px}
+  .ph-big{font-size:56px}
+  .ph-rest{font-size:24px}
+  .ph-verdict{padding:28px 28px 30px}
+  .ph-chain{padding-top:52px}
+  .ph-link{grid-template-columns:52px minmax(0,1fr) 104px;column-gap:20px;padding-bottom:40px}
+  .ph-link::before{left:25px;top:52px}
+  .ph-n{width:52px;height:52px;line-height:52px;font-size:24px}
+  .ph-so{width:52px;top:-31px;font-size:19px}
+  .ph-s{font-size:27px;margin-top:5px}
+  .ph-g{width:104px;height:104px}
+  .ph-mid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);column-gap:72px;align-items:start;margin-top:36px}
+  .ph-they{font-size:26px}.ph-really{font-size:21px}
+  .ph-wrong{margin-top:48px !important}
+  .ph-bot{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);column-gap:72px;align-items:start}
+  .ph-now li{font-size:22px}
+  .ph-ev li{flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:3px 8px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .ph-loop svg{animation:ph-spin 2.8s linear infinite}
+  @keyframes ph-spin{to{transform:rotate(360deg)}}
+}
+
+/* v2 (10 Nov, Maarten: illustrations and the Cor breakdown stay, and stay open) */
+.ph-line{margin:30px 0 0}
+.ph-line .ln{margin:0;border-radius:6px;padding:18px 16px 14px}
+.ph-cor{grid-column:2/span 2;margin:10px 0 0;padding:10px 12px 11px;background:rgba(255,255,255,.42);border-left:3px solid var(--teal);border-radius:0 4px 4px 0}
+.ph-says{font:500 16.5px/1.42 var(--serif);margin:0 0 6px;text-wrap:pretty}
+.ph-says .k{display:flex;align-items:center;gap:6px;font:700 13.5px/1.2 var(--sans);color:var(--teal);margin:0 0 3px}
+.ph-says .k .rings{width:15px;height:15px;stroke:var(--teal)}
+.ph-cor .ev{margin:0}
+.ph-cor2{margin-top:8px}
+.ph-cor2 .sys,.ph-cor2 .how{max-width:none}
+.ph-facts{margin:10px 0 0;font:500 14px/1.45 var(--sans)}
+.ph-facts summary{cursor:pointer;font-weight:700;color:var(--teal)}
+.ph-facts ol{margin:6px 0 0;padding-left:22px}
+.ph-against,.ph-nic{list-style:none;margin:10px 0 0;padding:0}
+.ph-against li,.ph-nic li{padding:10px 0;border-bottom:1px solid var(--rule)}
+.ph-against p,.ph-nic p{font:400 17px/1.42 var(--serif);margin:0}
+.ph-against .ev{margin-top:5px}
+.ph-nic .study{font:500 13.5px/1.4 var(--sans);color:var(--dim);margin-top:3px}
+.ph-fine{font:400 13px/1.45 var(--sans);color:var(--dim);margin:12px 0 0}
+.ph-side .ph-wrong{margin-top:48px !important}
+@media (min-width:1000px){
+  .ph-lead{position:static}
+  .ph-bot{margin-top:8px}
+}
+
+/* v3 (10 Nov, Maarten): the science collapsed in the chain, real example cases high up, mechanisms collapsed,
+   the test at the bottom, a brain graphic in "which system wins" */
+details.ph-cor{padding:0;background:none;border-left:0;border-radius:0;margin:8px 0 0}
+details.ph-cor summary{display:inline-flex;align-items:center;gap:6px;cursor:pointer;list-style:none;font:700 14px/1.2 var(--sans);color:var(--teal);padding:5px 0}
+details.ph-cor summary::-webkit-details-marker{display:none}
+details.ph-cor summary .rings{width:16px;height:16px;stroke:var(--teal)}
+details.ph-cor summary::after{content:"+";font:700 16px/1 var(--sans)}
+details.ph-cor[open] summary::after{content:"\2212"}
+details.ph-cor[open]{padding:4px 12px 11px;background:rgba(255,255,255,.42);border-left:3px solid var(--teal);border-radius:0 4px 4px 0}
+.ph-cases{padding-top:44px}
+.ph-case{margin:0 0 22px;padding:0 0 20px;border-bottom:1px solid var(--rule)}
+.ph-case:last-child{border-bottom:0;margin-bottom:0}
+.ph-case figure{margin:0;background:#fff;border:1px solid var(--oxblood);border-radius:4px;overflow:hidden;box-shadow:0 2px 0 rgba(58,18,24,.15)}
+.ph-case img{width:100%;height:auto}
+.ph-case blockquote{margin:0;padding:14px 16px 15px;background:#fff;border:1px solid var(--oxblood);border-radius:4px;box-shadow:0 2px 0 rgba(58,18,24,.15);font:500 21px/1.3 var(--serif);color:#1d1d1d;text-wrap:pretty}
+.ph-case blockquote::before{content:"\201C"}.ph-case blockquote::after{content:"\201D"}
+.ph-who{font:500 13.5px/1.4 var(--sans);color:var(--dim);margin:8px 0 0}
+.ph-who a{color:var(--link)}
+.ph-sub{font:700 17.5px/1.3 var(--sans);letter-spacing:-.006em;margin:6px 0 0;text-wrap:pretty}
+.ph-mech{margin:26px 0 0;border-top:1px solid rgba(58,18,24,.3);border-bottom:1px solid rgba(58,18,24,.3)}
+.ph-mech summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;padding:14px 0;font:700 20px/1.2 var(--sans)}
+.ph-mech summary::-webkit-details-marker{display:none}
+.ph-mech summary .cnt{font:500 13.5px/1.3 var(--sans);color:var(--dim)}
+.ph-mech summary::after{content:"+";margin-left:auto;font:700 22px/1 var(--sans);color:var(--teal)}
+.ph-mech[open] summary::after{content:"\2212"}
+.ph-mech .mxs{padding-bottom:16px}
+.ph-brain{margin:6px 0 18px;padding:16px;background:rgba(255,255,255,.42);border:1px solid var(--oxblood);border-radius:6px;display:grid;gap:10px}
+.ph-brain-svg{width:100%;max-width:330px;height:auto;justify-self:center}
+.ph-brain .bt{font:800 15px var(--sans);fill:#3a1218}.ph-brain .bt.w{fill:#fff6e4}.ph-brain .bt.s{font-size:11.5px}
+.ph-brain ol{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ph-brain li{display:grid;grid-template-columns:16px minmax(0,1fr);column-gap:10px}
+.ph-brain li i{grid-row:1/span 3;width:16px;height:16px;border-radius:3px;border:1.5px solid var(--oxblood);margin-top:2px}
+.ph-brain .bn{font:500 15px/1.3 var(--sans);margin:0}.ph-brain .bn b{font-weight:800}
+.ph-brain .bd{font:500 15.5px/1.35 var(--serif);margin:2px 0 4px}
+.ph-brain .br{display:flex;flex-wrap:wrap;gap:5px;margin:0}
+.ph-brain .br span{font:600 12.5px/1.25 var(--sans);padding:4px 8px;border:1px solid var(--oxblood);border-radius:99px;background:var(--parchment)}
+.ph-brain .br span.win{background:var(--oxblood);color:#fff6e4}
+.ph-brain .wtag{font:800 10.5px/1 var(--sans);background:var(--coral);color:var(--oxblood);padding:2px 4px;border-radius:2px;margin-left:3px}
+.ph-brain-n{font:italic 500 14.5px/1.4 var(--serif);color:var(--dim);margin:0}
+.ph-bot .ph-wrong{margin-top:48px !important}
+@media (min-width:1000px){
+  .ph-mid{margin-top:20px}
+  .ph-cases{padding-top:52px}
+  .ph-brain{grid-template-columns:330px minmax(0,1fr);column-gap:40px;align-items:center;padding:22px 26px}
+  .ph-brain-n{grid-column:1/-1}
+  .ph-bot{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+.ph-bw{margin:44px 0 0;padding-top:16px;border-top:2px solid var(--oxblood)}
+.ph-bw h2{font:700 27px/1.1 var(--sans);letter-spacing:-.01em;margin:0 0 12px}
+.ph-cor2 .sys{margin-top:10px;border-top:0;padding-top:0}
+
+/* v4: redrawn brain, numbered to its legend; cases moved below the chain */
+.ph-brain-svg{max-width:400px}
+.ph-brain li{grid-template-columns:26px minmax(0,1fr)}
+.ph-brain li i{width:26px;height:26px;border-radius:50%;border:2px solid var(--oxblood);font:800 14px/22px var(--sans);font-style:normal;text-align:center;margin-top:0;color:#fff6e4}
+.ph-brain li i.n1{background:#3a1218}.ph-brain li i.n2{background:#2d6b6b}.ph-brain li i.n3{background:#e6cf94;color:#3a1218}
+.ph-cases{padding-top:48px}
+@media (min-width:1000px){
+  .ph-brain{grid-template-columns:400px minmax(0,1fr)}
+  .ph-chain{padding-top:52px}
+  .ph-mid{grid-template-columns:minmax(0,6fr) minmax(0,5fr)}
+  .ph-cases{padding-top:48px;columns:2;column-gap:32px}
+  .ph-cases h2{column-span:all}
+  .ph-case{break-inside:avoid}
+}
+
+/* v5: every block folds from its heading, open by default */
+[data-fold-head]{cursor:pointer;-webkit-tap-highlight-color:transparent}
+[data-fold-head]:focus-visible{outline:2px solid var(--teal);outline-offset:4px;border-radius:3px}
+.ph-tg{display:inline-block;margin-left:10px;width:22px;height:22px;border:1.5px solid currentColor;border-radius:50%;font:700 16px/19px var(--sans);text-align:center;vertical-align:middle;opacity:.7}
+[data-fold].is-shut>:not([data-fold-head]){display:none !important}
+.ph-line h2{margin:0 0 10px}
+.ph-verdict.is-shut .ph-lab{margin-bottom:0}
+
+/* 10 Nov (parental burnout, celebrity): long labels break with a hyphen instead of mid-word, and a plain case card
+   for a number or a description that is not a quote */
+.ph-they{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:normal}
+.ph-card{margin:0;padding:14px 16px 15px;background:#fff;border:1px solid var(--oxblood);border-radius:4px;box-shadow:0 2px 0 rgba(58,18,24,.15)}
+.ph-card .b{font:800 24px/1.15 var(--sans);letter-spacing:-.015em;color:var(--oxblood);margin:0;text-wrap:balance}
+.ph-card .s{font:500 15px/1.35 var(--serif);color:var(--dim);margin:6px 0 0}
+</style>
+</head>
+<body class="ph">
+<nav class="doors" aria-label="Demismatch"><div class="d-in"><a class="dm" href="https://demismatch.com">Demismatch</a><a href="../">whatreally.is</a><a href="https://maartenrischen.github.io/demismatch-then-now-preview/">Then and now</a></div></nav>
+<div class="cor-strip" role="note"><div class="cs-in"><a class="cs-mark" href="https://cor.demismatch.com" aria-label="Cor, the evidence atlas"><svg class="rings" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><circle cx="13.2" cy="13.2" r="7.6"/><circle cx="14.4" cy="14.4" r="4.4"/><circle class="dot" cx="15.4" cy="15.4" r="2.1"/></svg></a>
+<p><b class="no">Not an opinion.</b> <span class="lg">Every claim here comes from <a href="https://cor.demismatch.com">Cor</a>, <b>658</b> graded findings from <b>159</b> studies and books on what humans need.</span><span class="sm"><a href="https://cor.demismatch.com">Cor</a>: <b>658</b> graded findings, <b>159</b> studies.</span></p></div></div>
+<main class="ph-wrap">
+<div class="ph-top">
+<div class="ph-lead">
+<header class="ph-hd"><p class="ph-wri">What really is:</p><h1>Purpose</h1></header>
+<section class="ph-verdict" data-fold aria-label="What it really is"><p class="ph-lab" data-fold-head>What it really is</p><p class="ph-big">A drive left with no target.</p><p class="ph-rest">Cor argues that forager effort met its result within minutes to days, while much modern work breaks that link. It reads feeds, without testing it yet, as firing the wanting without giving the drive anything to finish.</p></section>
+<section class="ph-line line" data-fold aria-labelledby="tn"><h2 id="tn" data-fold-head>Then and now</h2>
+<div class="ln" data-line="effort"><p class="ln-then">A forager dug, tracked or built something and saw the result within days.</p><div class="film"><video class="clip" data-topic="effort" data-part="then" data-signal="1" data-track="../tracks/effort.json" src="../media/effort-then.mp4" poster="../media/effort-then.jpg" muted playsinline autoplay loop preload="metadata" aria-label="A forager dug, tracked or built something and saw the result within days."></video><canvas aria-hidden="true"></canvas></div><canvas class="band" aria-hidden="true"></canvas><div class="film now"><video class="clip" data-topic="effort" data-part="now" data-signal="1" data-track="../tracks/effort.json" src="../media/effort-now.mp4" poster="../media/effort-now.jpg" muted playsinline autoplay loop preload="metadata" aria-label="Someone reaches the goal they worked toward for years and has nothing next to work on."></video><canvas aria-hidden="true"></canvas></div><p class="ln-now">Someone reaches the goal they worked toward for years and has nothing next to work on.</p>
+<p class="ln-src">Sources: EEA-SUBS-02. Time scale: Hublin et al. 2017; Richter et al. 2017.<span class="key"><i></i>Gold rings: the alarm is on</span></p></div>
+<p class="go"><a href="https://maartenrischen.github.io/demismatch-then-now-preview/#effort" rel="noopener">See the whole line</a>: 11,100 generations of your ancestors, then you.</p></section>
+</div>
+<section class="ph-chain" data-fold aria-labelledby="ch"><h2 id="ch" data-fold-head>How it happens</h2><ol>
+<li class="ph-link"><span class="ph-n">1</span><p class="ph-s">The pursuit drive pushes you to explore and work on real problems. In forager camps, effort and result sat close together: you dug, tracked or built and saw the outcome within days.</p><span class="ph-g"><svg viewBox="0 0 96 96" aria-hidden="true"><line x1="48" y1="48" x2="48.0" y2="12.0" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="71.1" y2="20.4" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="83.5" y2="41.7" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="79.2" y2="66.0" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="60.3" y2="81.8" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="35.7" y2="81.8" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="16.8" y2="66.0" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="12.5" y2="41.7" stroke="#2d6b6b" stroke-width="1.4"/><line x1="48" y1="48" x2="24.9" y2="20.4" stroke="#2d6b6b" stroke-width="1.4"/><circle cx="48.0" cy="12.0" r="6.4" fill="#2d6b6b"/><circle cx="71.1" cy="20.4" r="6.4" fill="#2d6b6b"/><circle cx="83.5" cy="41.7" r="6.4" fill="#2d6b6b"/><circle cx="79.2" cy="66.0" r="6.4" fill="#2d6b6b"/><circle cx="60.3" cy="81.8" r="6.4" fill="#2d6b6b"/><circle cx="35.7" cy="81.8" r="6.4" fill="#2d6b6b"/><circle cx="16.8" cy="66.0" r="6.4" fill="#2d6b6b"/><circle cx="12.5" cy="41.7" r="6.4" fill="#2d6b6b"/><circle cx="24.9" cy="20.4" r="6.4" fill="#2d6b6b"/><circle cx="48" cy="48" r="8.5" fill="#3a1218"/></svg></span>
+<details class="ph-cor"><summary><svg class="rings" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><circle cx="13.2" cy="13.2" r="7.6"/><circle cx="14.4" cy="14.4" r="4.4"/><circle class="dot" cx="15.4" cy="15.4" r="2.1"/></svg>The science says</summary><p class="ph-says">Cor's M2 resolves on engagement with real challenges that produce tangible outcomes, and SEEKING is a persistent exploratory drive (E397). Cor's row on forager work describes a short, visible loop from effort to result; it is argued and not yet tested.</p><p class="ev"><span class="eg"><a href="https://cor.demismatch.com/mechanism.html#M2" rel="noopener" title="Pursuit / Exploration, established">M2 <span class="ref">Pursuit / Exploration, established</span></a></span><span class="eg"><svg class="gm gm-many" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><rect x="1" y="1" width="8" height="8"/></svg><span class="gl">tested many times</span><a href="https://cor.demismatch.com/corpus.html#w=3" rel="noopener" title="Panksepp &amp; Biven 2012">E397 <span class="ref">Panksepp &amp; Biven 2012</span></a></span><span class="eg"><svg class="gm gm-argued" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><rect class="o d" x="1" y="1" width="8" height="8"/></svg><span class="gl">argued, not yet tested</span><a href="https://cor.demismatch.com/the-gap.html#EEA-SUBS-02" rel="noopener" title="Effort-to-outcome contingency">EEA-SUBS-02 <span class="ref">Effort-to-outcome contingency</span></a></span></p></details></li>
+<li class="ph-link"><span class="ph-so">so</span><span class="ph-n">2</span><p class="ph-s">Much modern work breaks that loop: effort runs through long opaque chains, and rewards come detached in time from the effort.</p><span class="ph-g"><svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="24" cy="48" r="21" fill="#fff" stroke="#3a1218" stroke-width="2.6"/><path d="M24 33.5 V48 L34 54.5" fill="none" stroke="#3a1218" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M48 48 H52" stroke="#3a1218" stroke-width="2.4" stroke-linecap="round"/><path d="M50.5 43.5 L56 48 L50.5 52.5 Z" fill="#3a1218"/><circle cx="76" cy="48" r="18" fill="#c4962c" stroke="#3a1218" stroke-width="2.2"/><text x="76" y="56" text-anchor="middle" font-family="Schibsted Grotesk,Arial,sans-serif" font-weight="800" font-size="23" fill="#3a1218">$</text></svg></span>
+<details class="ph-cor"><summary><svg class="rings" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><circle cx="13.2" cy="13.2" r="7.6"/><circle cx="14.4" cy="14.4" r="4.4"/><circle class="dot" cx="15.4" cy="15.4" r="2.1"/></svg>The science says</summary><p class="ph-says">Cor records that much modern work cuts the link between effort and a visible result, and that work time is clocked and continuous. The digital-work reading in E587 is a prediction and has not been tested.</p><p class="ev"><span class="eg"><svg class="gm gm-argued" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><rect class="o d" x="1" y="1" width="8" height="8"/></svg><span class="gl">argued, not yet tested</span><a href="https://cor.demismatch.com/the-gap.html#EEA-SUBS-02" rel="noopener" title="Effort-to-outcome contingency">EEA-SUBS-02 <span class="ref">Effort-to-outcome contingency</span></a></span><span class="eg"><svg class="gm gm-contested" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><rect class="o" x="1" y="1" width="8" height="8"/><path class="o" d="M1.5 8.5 8.5 1.5"/></svg><span class="gl">contested</span><a href="https://cor.demismatch.com/the-gap.html#EEA-SUBS-04" rel="noopener" title="Daily subsistence work-hours">EEA-SUBS-04 <span class="ref">Daily subsistence work-hours</span></a></span><span class="eg"><svg class="gm gm-argued" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><rect class="o d" x="1" y="1" width="8" height="8"/></svg><span class="gl">argued, not yet tested</span><a href="https://cor.demismatch.com/corpus.html#w=102" rel="noopener" title="van Vugt et al. 2024">E587 <span class="ref">van Vugt et al. 2024</span></a></span></p></details></li>
+<li class="ph-link"><span class="ph-so">so</span><span class="ph-n">3</span><p class="ph-s">Then the goal arrives, or the job ends, or it turns into meetings all day. The drive is still running and has no real task in front of it.</p><span class="ph-g"><svg viewBox="0 0 96 96" aria-hidden="true"><rect x="14" y="30" width="60" height="36" rx="6" fill="#fff" stroke="#3a1218" stroke-width="2.8"/><rect x="74" y="40" width="7" height="16" rx="2" fill="#3a1218"/><rect x="20" y="36" width="11" height="24" rx="2" fill="#b3261e"/></svg></span>
+<details class="ph-cor"><summary><svg class="rings" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><circle cx="13.2" cy="13.2" r="7.6"/><circle cx="14.4" cy="14.4" r="4.4"/><circle class="dot" cx="15.4" cy="15.4" r="2.1"/></svg>The science says</summary><p class="ph-says">Cor's M2 resolves on goal progress and real challenges with tangible outcomes. Cor's M6 ranks abstract work where effort does not visibly register as a mixed match, in the middle of its gradient.</p><p class="ev"><span class="eg"><a href="https://cor.demismatch.com/mechanism.html#M2" rel="noopener" title="Pursuit / Exploration, established">M2 <span class="ref">Pursuit / Exploration, established</span></a></span><span class="eg"><a href="https://cor.demismatch.com/mechanism.html#M6" rel="noopener" title="Controllability / Agency, established">M6 <span class="ref">Controllability / Agency, established</span></a></span></p><p class="ph-gap">Not in Cor yet: a study showing that felt purpose drops after a long-held goal is reached or work ends.</p></details></li>
+<li class="ph-link"><span class="ph-so">so</span><span class="ph-n">4</span><p class="ph-s">Cor reads feeds and endless scrolling as firing the wanting side of the drive without resolving it, a reading not yet tested.</p><span class="ph-g"><svg viewBox="0 0 96 96" aria-hidden="true"><path d="M 74.8 30.4 A 32 32 0 1 0 79.5 54.2" fill="none" stroke="#b3261e" stroke-width="6" stroke-linecap="round"/><path d="M 64.5 22.5 L 79.5 28 L 77 43.5 Z" fill="#b3261e"/><circle cx="48" cy="48" r="8.5" fill="#3a1218"/></svg></span><p class="ph-loop"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15.8 6.2A7 7 0 1 0 17 10" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M13 3.2 L17.6 5.4 L15.6 9.8 Z" fill="#fff"/></svg>Each pleasure that fails to close the gap sends the drive back to looking.</p>
+<details class="ph-cor"><summary><svg class="rings" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><circle cx="13.2" cy="13.2" r="7.6"/><circle cx="14.4" cy="14.4" r="4.4"/><circle class="dot" cx="15.4" cy="15.4" r="2.1"/></svg>The science says</summary><p class="ph-says">In healthy humans, lowering dopamine cut the wanting for a drug and left the liking unchanged, across several studies (E133). Cor ranks idle scrolling and browsing near the bottom of M2's gradient. Cor reads apps and feeds as wanting without resolution, and that reading has not yet been tested case by case (E131).</p><p class="ev"><span class="eg"><svg class="gm gm-many" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><rect x="1" y="1" width="8" height="8"/></svg><span class="gl">tested many times</span><a href="https://cor.demismatch.com/corpus.html#w=27" rel="noopener" title="Berridge 2007">E133 <span class="ref">Berridge 2007</span></a></span><span class="eg"><svg class="gm gm-many" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><rect x="1" y="1" width="8" height="8"/></svg><span class="gl">tested many times</span><a href="https://cor.demismatch.com/corpus.html#w=27" rel="noopener" title="Berridge 2007">E131 <span class="ref">Berridge 2007</span></a></span><span class="eg"><a href="https://cor.demismatch.com/mechanism.html#M2" rel="noopener" title="Pursuit / Exploration, established">M2 <span class="ref">Pursuit / Exploration, established</span></a></span></p></details></li>
+<li class="ph-link"><span class="ph-so">so</span><span class="ph-n">5</span><p class="ph-s">The search for purpose becomes another distant goal. Coaches sell it, people compare themselves with strangers who post about theirs, and the search itself becomes a source of stress.</p><span class="ph-g"><svg viewBox="0 0 96 96" aria-hidden="true"><line x1="14" y1="48" x2="45" y2="48" stroke="#2d6b6b" stroke-width="1.6"/><rect x="45" y="6" width="41" height="84" rx="8" fill="#fff" stroke="#3a1218" stroke-width="2.6"/><circle cx="58" cy="22" r="5.4" fill="#b3261e"/><circle cx="73" cy="22" r="5.4" fill="#b3261e"/><circle cx="58" cy="39.3" r="5.4" fill="#b3261e"/><circle cx="73" cy="39.3" r="5.4" fill="#b3261e"/><circle cx="58" cy="56.6" r="5.4" fill="#b3261e"/><circle cx="73" cy="56.6" r="5.4" fill="#b3261e"/><circle cx="58" cy="73.9" r="5.4" fill="#b3261e"/><circle cx="73" cy="73.9" r="5.4" fill="#b3261e"/><circle cx="14" cy="48" r="8.5" fill="#3a1218"/></svg></span><p class="ph-loop"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15.8 6.2A7 7 0 1 0 17 10" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M13 3.2 L17.6 5.4 L15.6 9.8 Z" fill="#fff"/></svg>The search sets a new distant goal with no visible result, which repeats the second link.</p>
+<details class="ph-cor"><summary><svg class="rings" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="11"/><circle cx="13.2" cy="13.2" r="7.6"/><circle cx="14.4" cy="14.4" r="4.4"/><circle class="dot" cx="15.4" cy="15.4" r="2.1"/></svg>The science says</summary><p class="ph-says">Klinger's account, reported by Nesse, holds that low mood rises when a goal cannot be reached and the person cannot let it go; this is argued and not tested (E137). Cor's M5 places comparison by follower and like counts near the bottom of its gradient, a rung derived from the architecture.</p><p class="ev"><span class="eg"><svg class="gm gm-argued" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><rect class="o d" x="1" y="1" width="8" height="8"/></svg><span class="gl">argued, not yet tested</span><a href="https://cor.demismatch.com/corpus.html#w=53" rel="noopener" title="Nesse 2000">E137 <span class="ref">Nesse 2000</span></a></span><span class="eg"><a href="https://cor.demismatch.com/mechanism.html#M5" rel="noopener" title="Status Monitoring, established">M5 <span class="ref">Status Monitoring, established</span></a></span></p></details></li>
+</ol></section>
+</div>
+<div class="ph-mid">
+<section class="ph-cases" data-fold aria-labelledby="cs"><h2 id="cs" data-fold-head>Real example cases</h2>
+<article class="ph-case"><blockquote>Young people overwhelmingly want work that helps others, but only about half of those who want such jobs are in them</blockquote><p class="ph-who"><a href="https://www.gallup.com/file/analytics/711485/Gallup_WFF_MCC_Press_Release.pdf" rel="noopener">Stephanie Marken, senior partner at Gallup, in the Gallup and Making Caring Common press release on the Voices of Gen Z survey</a>, 24 June 2026</p><p class="ph-sub">Young people who feel they help others report far more purpose, and about half of those who want such work do not have it.</p></article>
+<article class="ph-case"><blockquote>But now, I don't have any motive in my life suddenly.</blockquote><p class="ph-who"><a href="https://www.teamblind.com/post/the-curse-of-having-everything-c5g0chpf" rel="noopener">An anonymous tech worker on Blind</a>, </p><p class="ph-sub">Ten years went into one goal. Once the goal was reached, the drive had no target, and Netflix, games and parties did not close the gap.</p></article>
+<article class="ph-case"><blockquote>It wasn’t a lack of activities that troubled him. It was the absence of meaning behind them.</blockquote><p class="ph-who"><a href="https://gcn.com/retirement-finally-bring-relief-65/19502/" rel="noopener">Hugo Rojas, interviewing a 65-year-old retiree for GCN</a>, 20 April 2026</p><p class="ph-sub">When the job ended, his days lost their shape, and routines and people slowly brought back a direction.</p></article>
+<article class="ph-case"><blockquote>I work to have a good life, but this good living is not fully satisfying and doesn’t give my life meaning.</blockquote><p class="ph-who"><a href="https://candost.blog/on-the-purpose-of-life/" rel="noopener">The author of a first-person essay on candost.blog</a>, </p><p class="ph-sub">With a good life in place, work is the only thing shaping the day, and helping others was what made the author happier.</p></article>
+<article class="ph-case"><blockquote>Each time I scroll through social media, it seems like there's always one person talking about their purpose in life.</blockquote><p class="ph-who"><a href="https://www.betterup.com/blog/i-have-no-purpose" rel="noopener">Madeline Miles, on the blog of the coaching company BetterUp</a>, </p><p class="ph-sub">A coaching company frames purpose as a personal search, and tells readers not to measure themselves against people who post about having found theirs.</p></article>
+</section>
+<section class="ph-vs" data-fold aria-label="What they say it is, and what it really is"><div class="ph-vs-h" data-fold-head><span class="t">What they say it is</span><span class="w">What it really is</span></div>
+<div class="ph-row"><p class="ph-they">lack of meaning or purpose</p><p class="ph-really">The pursuit drive has no real challenge in front of it that gives a result you can see.</p></div>
+<div class="ph-row"><p class="ph-they">no motive in life</p><p class="ph-really">The motive was one distant goal. Once that goal was reached, the drive had nothing left to work on.</p></div>
+<div class="ph-row"><p class="ph-they">hedonic treadmill</p><p class="ph-really">Feeds and endless scrolling, Cor reads without yet testing, fire the wanting without giving the outcome the drive resolves on.</p></div>
+<div class="ph-row"><p class="ph-they">purpose anxiety</p><p class="ph-really">The search for purpose has become a new distant goal with no visible result, and it is measured against strangers online.</p></div>
+</section>
+</div>
+<div class="ph-cor2">
+<section class="ph-bw" data-fold aria-labelledby="bw-h"><h2 id="bw-h" data-fold-head>Which system wins</h2><div class="ph-brain"><svg class="ph-brain-svg" viewBox="30 14 380 322" role="img" aria-label="A brain cut down the middle. 1, at the core and running down: the brainstem and hypothalamus, the oldest part. 2, the ring around it: the limbic system. 3, the outer layer: the cortex, the newest part.">
+<defs>
+<linearGradient id="phb-cx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0dfae"/><stop offset="1" stop-color="#dcc07a"/></linearGradient>
+<linearGradient id="phb-lb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f8a88"/><stop offset="1" stop-color="#235656"/></linearGradient>
+<linearGradient id="phb-st" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a1c26"/><stop offset="1" stop-color="#2a0c11"/></linearGradient>
+<filter id="phb-sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#3a1218" flood-opacity=".22"/></filter>
+<clipPath id="phb-cc"><path id="phb-cxp" d="M52 176 C36 128 62 70 128 44 C196 18 290 26 342 72 C386 110 396 166 368 200 C352 220 322 226 300 218 C288 232 262 238 240 230 C226 246 190 250 164 240 C140 246 112 238 100 220 C76 216 58 200 52 176 Z"/></clipPath>
+</defs>
+
+<g filter="url(#phb-sh)">
+<!-- cerebellum -->
+<path d="M300 222 C330 206 380 214 388 244 C394 270 360 286 326 280 C304 276 288 258 290 238 Z" fill="url(#phb-cx)" stroke="#3a1218" stroke-width="2.4"/>
+<g fill="none" stroke="#3a1218" stroke-opacity=".45" stroke-width="1.5" stroke-linecap="round"><path d="M304 236 C330 222 366 226 380 246"/><path d="M300 248 C328 236 364 240 382 258"/><path d="M304 261 C330 252 360 256 374 270"/><path d="M314 272 C334 266 354 270 362 278"/></g>
+<!-- cortex -->
+<use href="#phb-cxp" fill="url(#phb-cx)" stroke="#3a1218" stroke-width="2.6"/>
+<g clip-path="url(#phb-cc)" fill="none" stroke="#3a1218" stroke-opacity=".38" stroke-width="1.7" stroke-linecap="round">
+<path d="M70 150 C92 138 100 112 124 104"/><path d="M96 86 C120 92 138 74 160 60"/><path d="M150 44 C160 66 188 60 204 40"/><path d="M214 34 C222 58 252 56 262 36"/><path d="M276 40 C282 62 312 66 324 56"/><path d="M336 78 C330 100 350 112 372 110"/><path d="M380 136 C360 140 352 160 366 176"/><path d="M356 202 C344 190 326 194 318 208"/><path d="M62 186 C82 192 92 206 112 204"/><path d="M118 226 C132 214 150 222 162 234"/><path d="M186 244 C196 232 216 232 228 240"/><path d="M252 232 C262 220 282 220 296 226"/>
+<path d="M88 124 C104 128 118 150 110 170"/><path d="M130 82 C140 100 132 118 118 128"/>
+</g>
+<!-- inner field so the layers read -->
+<path d="M110 176 C96 120 150 78 222 80 C296 82 340 124 326 176 C318 204 290 214 264 208 L216 208 C180 214 122 212 110 176 Z" fill="#fbf5e6" stroke="#3a1218" stroke-opacity=".3" stroke-width="1.4"/>
+<!-- limbic ring -->
+<path d="M150 176 C138 132 180 108 224 110 C270 112 304 138 294 174 C290 188 276 194 262 190" fill="none" stroke="#3a1218" stroke-width="32" stroke-linecap="round"/>
+<path d="M150 176 C138 132 180 108 224 110 C270 112 304 138 294 174 C290 188 276 194 262 190" fill="none" stroke="url(#phb-lb)" stroke-width="27" stroke-linecap="round"/>
+<path d="M156 160 C156 136 190 122 224 124 C256 126 280 140 280 160" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="3" stroke-linecap="round"/>
+<!-- core: hypothalamus running down into the brainstem, one piece -->
+<path d="M196 172 C196 150 220 142 240 146 C262 150 272 168 268 186 C266 198 270 212 274 226 C280 256 288 290 290 312 C291 320 285 325 277 325 L258 325 C250 325 245 320 244 312 C240 280 228 244 212 214 C202 204 196 188 196 172 Z" fill="url(#phb-st)" stroke="#3a1218" stroke-width="2.4"/>
+<path d="M206 170 C208 158 222 152 236 155" fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="3" stroke-linecap="round"/>
+</g>
+<!-- numbered markers -->
+<g font-family="Schibsted Grotesk,Arial,sans-serif" font-weight="800" font-size="15" text-anchor="middle">
+<circle cx="264" cy="282" r="14" fill="#f4ecd9" stroke="#3a1218" stroke-width="2.4"/><text x="264" y="287.5" fill="#3a1218">1</text>
+<circle cx="224" cy="110" r="14" fill="#f4ecd9" stroke="#3a1218" stroke-width="2.4"/><text x="224" y="115.5" fill="#3a1218">2</text>
+<circle cx="180" cy="56" r="14" fill="#f4ecd9" stroke="#3a1218" stroke-width="2.4"/><text x="180" y="61.5" fill="#3a1218">3</text>
+</g>
+</svg><ol><li><i class="n1">1</i><p class="bn"><b>Oldest. Brainstem and hypothalamus</b>, about 500 million years old</p><p class="bd">The SEEKING system's dopamine circuits drive wanting and exploration toward resources, whether or not anything arrives to finish the pursuit.</p><p class="br"><span class="win">The pursuit drive ran on a distant goal for years; once pay, security or retirement arrived, the drive has no target and pleasures cannot close the loop. <b class="wtag">Wins</b></span><span class="">The energy budget will not spend effort where nothing real is left to move for, so leisure and pleasure leave the person flat.</span></p></li><li><i class="n2">2</i><p class="bn"><b>Limbic system</b>, about 200 million years old</p><p class="bd">The controllability system tracks whether actions produce results, and in rats passivity is the default until control is detected.</p><p class="br"><span class="">Purpose is treated as a private quantity to find inside oneself, when it is what other people give back for being useful to them.</span><span class="">The unnoticed background is work away from family, a day with no people who depend on you, and living far from kin, so nothing outside the job gives the day a shape.</span><span class="">Effort that no longer visibly changes anything for anyone, such as meetings all day, leaves the agency system flat.</span></p></li><li><i class="n3">3</i><p class="bn"><b>Newest. Cortex</b>, about 50 to 100 million years old, with human add-ons from the last few million</p><p class="bd">Status monitoring compares your position against others, and Cor says it resolves in a group of people you know, which millions of online strangers are not.</p><p class="br"><span class="">Ancestrally, purpose came from being needed by a few dozen people who knew you, whose regard you could see; a job among strangers gives none of that.</span></p></li></ol><p class="ph-brain-n">Simplified. The older the system, the harder its signal hits and the less it can learn that the people on a screen are not in the room.</p></div></section>
+<section class="sys" data-fold aria-labelledby="sys-h"><h2 id="sys-h" data-fold-head>The scores</h2><p class="dek">Every brain system that could explain this, oldest at the top. The longer the bar, the more of the phenomenon it explains.</p>
+<p class="legend"><span><i class="sw at_stake"></i>What is at stake</span><span><i class="sw details"></i>Details explained</span><span><i class="sw distance"></i>Distance from the camp</span><span><svg class="dots" viewBox="0 0 17 10" width="17" height="10" aria-hidden="true"><circle cx="3.5" cy="5" r="2.4" class="d-on"/><circle cx="10.5" cy="5" r="2.4" class="d-off"/></svg>The 12 details of the phenomenon</span></p>
+<ol class="rows" style="--step:11.1111%"><li class="row scl" aria-hidden="true"><span class="age"></span><span class="lab"></span><div class="bar"><span class="track"><i style="left:0.000%">0</i><i style="left:22.222%">0.2</i><i style="left:44.444%">0.4</i><i style="left:66.667%">0.6</i><i style="left:88.889%">0.8</i></span><b class="sc">0.00</b></div></li>
+<li class="row win">
+<span class="age">500 Myr</span>
+<div class="lab"><span class="rd">The pursuit drive ran on a distant goal for years; once pay, security or retirement arrived, the drive has no target and pleasures cannot close the loop. <b class="wtag">Wins</b></span><a class="sy" href="https://cor.demismatch.com/mechanism.html#M2" rel="noopener">M2 Pursuit / Exploration</a>
+<span class="mt">Survival at stake, 6 of 12 details explained, distance 2</span></div>
+<div class="bar" role="img" aria-label="Score 0.81"><span class="track"><span class="seg at_stake" style="width:63.44%"></span><span class="seg details" style="width:15.89%"></span><span class="seg distance" style="width:10.60%"></span></span><b class="sc">0.81</b></div>
+<div class="dts"><svg class="dots" style="--n:12" viewBox="0 0 84 10" width="84" height="10" aria-hidden="true"><circle cx="3.5" cy="5" r="2.4" class="d-on"/><circle cx="10.5" cy="5" r="2.4" class="d-on"/><circle cx="17.5" cy="5" r="2.4" class="d-on"/><circle cx="24.5" cy="5" r="2.4" class="d-off"/><circle cx="31.5" cy="5" r="2.4" class="d-on"/><circle cx="38.5" cy="5" r="2.4" class="d-off"/><circle cx="45.5" cy="5" r="2.4" class="d-off"/><circle cx="52.5" cy="5" r="2.4" class="d-on"/><circle cx="59.5" cy="5" r="2.4" class="d-on"/><circle cx="66.5" cy="5" r="2.4" class="d-off"/><circle cx="73.5" cy="5" r="2.4" class="d-off"/><circle cx="80.5" cy="5" r="2.4" class="d-off"/></svg></div>
+</li>
+<li class="row">
+<span class="age">2-5 Myr</span>
+<div class="lab"><span class="rd">Ancestrally, purpose came from being needed by a few dozen people who knew you, whose regard you could see; a job among strangers gives none of that.</span><a class="sy" href="https://cor.demismatch.com/mechanism.html#M11" rel="noopener">M11 Cooperation / Alliance</a>
+<span class="mt">Survival at stake, 4 of 12 details explained, distance 3</span></div>
+<div class="bar" role="img" aria-label="Score 0.81"><span class="track"><span class="seg at_stake" style="width:63.44%"></span><span class="seg details" style="width:10.58%"></span><span class="seg distance" style="width:15.89%"></span></span><b class="sc">0.81</b></div>
+<div class="dts"><svg class="dots" style="--n:12" viewBox="0 0 84 10" width="84" height="10" aria-hidden="true"><circle cx="3.5" cy="5" r="2.4" class="d-off"/><circle cx="10.5" cy="5" r="2.4" class="d-off"/><circle cx="17.5" cy="5" r="2.4" class="d-off"/><circle cx="24.5" cy="5" r="2.4" class="d-off"/><circle cx="31.5" cy="5" r="2.4" class="d-off"/><circle cx="38.5" cy="5" r="2.4" class="d-off"/><circle cx="45.5" cy="5" r="2.4" class="d-on"/><circle cx="52.5" cy="5" r="2.4" class="d-on"/><circle cx="59.5" cy="5" r="2.4" class="d-on"/><circle cx="66.5" cy="5" r="2.4" class="d-off"/><circle cx="73.5" cy="5" r="2.4" class="d-on"/><circle cx="80.5" cy="5" r="2.4" class="d-off"/></svg></div>
+</li>
+<li class="row">
+<span class="age">50-100 Myr</span>
+<div class="lab"><span class="rd">Purpose is treated as a private quantity to find inside oneself, when it is what other people give back for being useful to them.</span><a class="sy" href="https://cor.demismatch.com/mechanism.html#M5" rel="noopener">M5 Status Monitoring</a>
+<span class="mt">Survival at stake, 5 of 12 details explained, distance 2</span></div>
+<div class="bar" role="img" aria-label="Score 0.79"><span class="track"><span class="seg at_stake" style="width:63.44%"></span><span class="seg details" style="width:13.26%"></span><span class="seg distance" style="width:10.60%"></span></span><b class="sc">0.79</b></div>
+<div class="dts"><svg class="dots" style="--n:12" viewBox="0 0 84 10" width="84" height="10" aria-hidden="true"><circle cx="3.5" cy="5" r="2.4" class="d-on"/><circle cx="10.5" cy="5" r="2.4" class="d-off"/><circle cx="17.5" cy="5" r="2.4" class="d-off"/><circle cx="24.5" cy="5" r="2.4" class="d-on"/><circle cx="31.5" cy="5" r="2.4" class="d-off"/><circle cx="38.5" cy="5" r="2.4" class="d-off"/><circle cx="45.5" cy="5" r="2.4" class="d-on"/><circle cx="52.5" cy="5" r="2.4" class="d-off"/><circle cx="59.5" cy="5" r="2.4" class="d-off"/><circle cx="66.5" cy="5" r="2.4" class="d-off"/><circle cx="73.5" cy="5" r="2.4" class="d-on"/><circle cx="80.5" cy="5" r="2.4" class="d-on"/></svg></div>
+</li>
+<li class="row">
+<span class="age">200 Myr</span>
+<div class="lab"><span class="rd">The unnoticed background is work away from family, a day with no people who depend on you, and living far from kin, so nothing outside the job gives the day a shape.</span><a class="sy" href="https://cor.demismatch.com/mechanism.html#M3" rel="noopener">M3 Social Bonding</a>
+<span class="mt">Survival at stake, 3 of 12 details explained, distance 3</span></div>
+<div class="bar" role="img" aria-label="Score 0.79"><span class="track"><span class="seg at_stake" style="width:63.44%"></span><span class="seg details" style="width:7.94%"></span><span class="seg distance" style="width:15.89%"></span></span><b class="sc">0.79</b></div>
+<div class="dts"><svg class="dots" style="--n:12" viewBox="0 0 84 10" width="84" height="10" aria-hidden="true"><circle cx="3.5" cy="5" r="2.4" class="d-off"/><circle cx="10.5" cy="5" r="2.4" class="d-off"/><circle cx="17.5" cy="5" r="2.4" class="d-off"/><circle cx="24.5" cy="5" r="2.4" class="d-off"/><circle cx="31.5" cy="5" r="2.4" class="d-off"/><circle cx="38.5" cy="5" r="2.4" class="d-off"/><circle cx="45.5" cy="5" r="2.4" class="d-off"/><circle cx="52.5" cy="5" r="2.4" class="d-on"/><circle cx="59.5" cy="5" r="2.4" class="d-on"/><circle cx="66.5" cy="5" r="2.4" class="d-off"/><circle cx="73.5" cy="5" r="2.4" class="d-on"/><circle cx="80.5" cy="5" r="2.4" class="d-off"/></svg></div>
+</li>
+<li class="row">
+<span class="age">200 Myr</span>
+<div class="lab"><span class="rd">Effort that no longer visibly changes anything for anyone, such as meetings all day, leaves the agency system flat.</span><a class="sy" href="https://cor.demismatch.com/mechanism.html#M6" rel="noopener">M6 Controllability / Agency</a>
+<span class="mt">Survival at stake, 3 of 12 details explained, distance 2</span></div>
+<div class="bar" role="img" aria-label="Score 0.74"><span class="track"><span class="seg at_stake" style="width:63.44%"></span><span class="seg details" style="width:7.94%"></span><span class="seg distance" style="width:10.60%"></span></span><b class="sc">0.74</b></div>
+<div class="dts"><svg class="dots" style="--n:12" viewBox="0 0 84 10" width="84" height="10" aria-hidden="true"><circle cx="3.5" cy="5" r="2.4" class="d-on"/><circle cx="10.5" cy="5" r="2.4" class="d-off"/><circle cx="17.5" cy="5" r="2.4" class="d-off"/><circle cx="24.5" cy="5" r="2.4" class="d-off"/><circle cx="31.5" cy="5" r="2.4" class="d-off"/><circle cx="38.5" cy="5" r="2.4" class="d-off"/><circle cx="45.5" cy="5" r="2.4" class="d-off"/><circle cx="52.5" cy="5" r="2.4" class="d-on"/><circle cx="59.5" cy="5" r="2.4" class="d-off"/><circle cx="66.5" cy="5" r="2.4" class="d-on"/><circle cx="73.5" cy="5" r="2.4" class="d-off"/><circle cx="80.5" cy="5" r="2.4" class="d-off"/></svg></div>
+</li>
+<li class="row">
+<span class="age">500 Myr</span>
+<div class="lab"><span class="rd">The energy budget will not spend effort where nothing real is left to move for, so leisure and pleasure leave the person flat.</span><a class="sy" href="https://cor.demismatch.com/mechanism.html#M13" rel="noopener">M13 Energy Regulation</a>
+<span class="mt">Reproduction at stake, 3 of 12 details explained, distance 2</span></div>
+<div class="bar" role="img" aria-label="Score 0.55"><span class="track"><span class="seg at_stake" style="width:42.51%"></span><span class="seg details" style="width:7.94%"></span><span class="seg distance" style="width:10.60%"></span></span><b class="sc">0.55</b></div>
+<div class="dts"><svg class="dots" style="--n:12" viewBox="0 0 84 10" width="84" height="10" aria-hidden="true"><circle cx="3.5" cy="5" r="2.4" class="d-on"/><circle cx="10.5" cy="5" r="2.4" class="d-off"/><circle cx="17.5" cy="5" r="2.4" class="d-on"/><circle cx="24.5" cy="5" r="2.4" class="d-off"/><circle cx="31.5" cy="5" r="2.4" class="d-off"/><circle cx="38.5" cy="5" r="2.4" class="d-off"/><circle cx="45.5" cy="5" r="2.4" class="d-off"/><circle cx="52.5" cy="5" r="2.4" class="d-off"/><circle cx="59.5" cy="5" r="2.4" class="d-on"/><circle cx="66.5" cy="5" r="2.4" class="d-off"/><circle cx="73.5" cy="5" r="2.4" class="d-off"/><circle cx="80.5" cy="5" r="2.4" class="d-off"/></svg></div>
+</li></ol>
+<p class="why">Why it wins. It explains six of the twelve details, more than any other reading, and it ties on score (0.809) with the reading that purpose came from being needed by people you know, which explains four.</p><p class="formula">Score = 0.571 x what is at stake (survival 1, reproduction 0.67, standing 0.33) + 0.286 x share of details explained + 0.143 x distance from the camp. What is at stake comes from Cor's entry for the system where Cor names it. Phylogenetic age adds no points; it orders the stack and settles near-ties.</p>
+<details class="ph-facts"><summary>The 12 details</summary><ol><li>People feel their life lacks meaning or purpose, as if they are drifting without direction or anything to do with the life they have.</li><li>It often arrives right after people reach a goal they worked toward for years, such as a well-paid job, financial security or retirement.</li><li>Free time, comfort and pleasures such as watching Netflix, gaming, partying, dating or relaxing do not relieve it and can make the emptiness plainer.</li><li>The lack of purpose comes with anxiety, and the search for a purpose itself becomes a source of stress.</li><li>It hits people who are comfortable and secure: those with good pay, health, relationships and free time still report it.</li><li>Among Gen Z, adults aged 19-28 lack meaning more than middle or high school students (40% vs. 22%) and lack purpose more (43% vs. 30%).</li><li>People who feel they make a positive difference in others' lives are about three-to-four times more likely to feel purpose or meaning, and helping others is repeatedly reported to ease it.</li><li>Paid work is the main thing people's days and identity are built around; when the work feels pointless, such as sitting in meetings all day, or when it ends, the sense of purpose goes with it.</li><li>Without the structure of work, days lose their shape and blur together, and adding routines and reconnecting with people slowly brings direction back.</li><li>Most people want work that helps others (79% of Gen Z), but only 56% of those employed who want such a job have one, with insufficient pay (49%) and emotionally draining work (46%) named as barriers.</li><li>People around them say it is common and offer fixes: exercise, meditation, waking early, reading, hobbies, volunteering, relationships, religion or having kids, and people busy with kids are described as having no time to ask the question.</li><li>Purpose is presented on social media and by coaching companies as a personal achievement to find and work toward, inviting comparison with people who post about having found theirs and selling coaching to get there.</li></ol></details></section>
+<section class="how" data-fold aria-labelledby="how-h"><h2 id="how-h" data-fold-head>How do we know?</h2>
+<dl class="stats"><div><dt>658</dt><dd>graded findings in Cor</dd></div><div><dt>159</dt><dd>studies and books</dd></div><div><dt>12</dt><dd>Cor records cited on this page</dd></div><div><dt>5</dt><dd>Cor systems at work here</dd></div></dl>
+<p class="cta"><a class="btn" href="https://cor.demismatch.com/" rel="noopener">Explore the atlas</a><a href="https://cor.demismatch.com/corpus.html" rel="noopener">All 159 works</a><a href="https://cor.demismatch.com/mechanisms.html" rel="noopener">All mechanisms</a></p>
+<details class="ph-mech"><summary><span>This phenomenon in Cor</span> <span class="cnt">5 systems, each with its grade and age</span></summary><div class="mxs"><article class="mx is-win"><h4><span class="code">M2</span>Pursuit / Exploration</h4>
+<p class="meta">Cor grade: established, circuit about 500 Myr old <b>wins here</b></p>
+<p><span class="k">In plain English</span>Drives you to explore, pursue goals, and engage with the world.</p>
+<p class="res"><span class="k">The research</span>General-purpose seeking system. SCOPE CHANGE from v3: sexual motivation removed (now M14). M2's resolution conditions narrow to: engagement with real-world challenges producing tangible outcomes, goal progress, skill building, resource acquisition.</p>
+<p class="res"><span class="k">Fully met by</span>Engagement with real challenges producing tangible outcomes.</p>
+<p class="more"><a href="https://cor.demismatch.com/mechanism.html#M2" rel="noopener">M2 in Cor: every source and grade</a></p></article>
+<article class="mx"><h4><span class="code">M11</span>Cooperation / Alliance</h4>
+<p class="meta">Cor grade: strongly supported, circuit about 2-5 Myr old</p>
+<p><span class="k">In plain English</span>Reciprocal exchange, cheater detection, coalitional identity.</p>
+<p class="res"><span class="k">The research</span>Reciprocity + norm enforcement + alliance dynamics. Absorbs old M10 (Cooperation) and M11 (Coalitional). NOTE: Tier 2 is a confidence grade, not an entailment status. M11 IS entailment-forced - convergence C11 forces it - and its four converging streams (Fehr &amp; Gächter, Boehm, Tomasello, Trivers) strongly support it without reaching the top confidence tier.</p>
+<p class="res"><span class="k">Fully met by</span>Trusted reciprocal network with norm enforcement within a group small enough for direct reputation tracking (on the order of ~150 - the same low-hundreds ceiling that bounds M3; the precise figure is contested per Lindenfors 2021). Norm enforcement requires repeated direct interaction where defectors can be identified, remembered, and sanctioned. Beyond that ceiling, cooperation requires institutional scaffolding (formal rules, third-party enforcement, shared fictions) rather than direct reciprocity. No shared fiction at the direct-reciprocity layer.</p>
+<p class="more"><a href="https://cor.demismatch.com/mechanism.html#M11" rel="noopener">M11 in Cor: every source and grade</a></p></article>
+<article class="mx"><h4><span class="code">M3</span>Social Bonding</h4>
+<p class="meta">Cor grade: established, circuit about 200 Myr old</p>
+<p><span class="k">In plain English</span>Forms bonds with other humans. Pain-grade distress when they're gone.</p>
+<p class="res"><span class="k">The research</span>Attachment and co-regulation system. Includes grief mode (absorbed from old M9 GRIEF). Two states: security (enables broadly) and grief (suppresses broadly).</p>
+<p class="res"><span class="k">Fully met by</span>Reliable human co-regulation through physical presence, operating through nested social layers: ~5 intimate co-regulators (primary emotional/physical support), ~15 sympathy group, ~50 close social partners, ~150 coherent face-to-face relationships (Dunbar number - outer cognitive ceiling). Each layer represents qualitatively different relationship types with different obligations and investment requirements. The innermost ~5 provide the majority of social regulation; the critical variable at this layer is reliability, not count. The ~150 outer figure is an illustrative central tendency, not a hard limit: its derivation from the primate neocortex-ratio regression is contested (Lindenfors, Wartel &amp; Lind 2021). What the evidence carries is the nested layering and the reliability-over-count point, not the exact rung figures; the layered structure and its low-hundreds clustering are separately observed in phone, Christmas-card, and Facebook data.</p>
+<p class="more"><a href="https://cor.demismatch.com/mechanism.html#M3" rel="noopener">M3 in Cor: every source and grade</a></p></article>
+<article class="mx"><h4><span class="code">M6</span>Controllability / Agency</h4>
+<p class="meta">Cor grade: established, circuit about 200 Myr old</p>
+<p><span class="k">In plain English</span>Tracks whether your actions produce results. Default is passivity - agency must be learned.</p>
+<p class="res"><span class="k">The research</span>vmPFC-DRN controllability circuit. Learned helplessness is the DEFAULT; agency is the override. Critical for breaking cascades.</p>
+<p class="res"><span class="k">Fully met by</span>Genuine action-outcome feedback. Decision latitude.</p>
+<p class="more"><a href="https://cor.demismatch.com/mechanism.html#M6" rel="noopener">M6 in Cor: every source and grade</a></p></article>
+<article class="mx"><h4><span class="code">M5</span>Status Monitoring</h4>
+<p class="meta">Cor grade: established, circuit about 50-100 Myr old</p>
+<p><span class="k">In plain English</span>Constantly monitors where you stand relative to others.</p>
+<p class="res"><span class="k">The research</span>Rank regulation. Shame, pride, submission, defeat, rank vigilance. Not optional - runs continuously.</p>
+<p class="res"><span class="k">Fully met by</span>Acceptable position in a bounded, personally-known reference group on the order of ~150 (an illustrative central tendency, not a hard number; the precise figure is contested per Lindenfors 2021). Earned prestige preferred over coerced dominance (Henrich &amp; Gil-White distinction - needs explicit treatment).</p>
+<p class="more"><a href="https://cor.demismatch.com/mechanism.html#M5" rel="noopener">M5 in Cor: every source and grade</a></p></article></div></details>
+<h3>What cuts against it</h3><ul class="ph-against"><li><p>In the Gallup survey, feeling that you make a positive difference to others was one of the strongest predictors of meaning, which fits a reading built on being needed by others as well as this one.</p></li><li><p>Cor's records describe ancestral food work as collaborative and interdependent, so the missing piece may be the people the work fed more than the challenge itself.</p><p class="ev"><span class="eg"><svg class="gm gm-argued" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><rect class="o d" x="1" y="1" width="8" height="8"/></svg><span class="gl">argued, not yet tested</span><a href="https://cor.demismatch.com/corpus.html#w=14" rel="noopener" title="Tomasello 2014">E239 <span class="ref">Tomasello 2014</span></a></span><span class="eg"><a href="https://cor.demismatch.com/mechanism.html#M11" rel="noopener" title="Cooperation / Alliance, strongly supported">M11 <span class="ref">Cooperation / Alliance, strongly supported</span></a></span></p></li><li><p>Gen Z adults aged 19-28 report lacking meaning more than teenagers, and most of them have not reached any long-held goal yet.</p></li></ul>
+<h3>Not in Cor yet</h3><ul class="ph-nic"><li><p>Reaching a long-held goal, or retiring, is followed by a drop in felt purpose.</p><p class="study">Study: A longitudinal panel that measures purpose before and after retirement or a major financial goal, such as the Health and Retirement Study.</p></li><li><p>Making a difference to others causes a sense of purpose.</p><p class="study">Study: Gallup and Making Caring Common 2026, Voices of Gen Z (correlational), plus an experiment that assigns people to helping tasks.</p></li></ul>
+<p class="ph-fine">Grades are Cor's. Every id opens its Cor page. The scores come from a decode-engine run on 2026-11-11: what is at stake from Cor's entry for each system where Cor names one, the rest from three independent readings. Real example cases are quoted from the sources named under each.</p></section>
+</div>
+<div class="ph-bot">
+<section class="ph-now" data-fold aria-labelledby="nw"><h2 id="nw" data-fold-head>So now what</h2><ol><li>Take on one task with a result you can see within days, such as building, fixing, teaching or growing something.</li><li>Choose work or volunteering where specific people you know use what you make or do.</li><li>Measure your progress against your own last month and leave out the people posting about their purpose.</li></ol></section>
+<section class="ph-wrong" data-fold aria-labelledby="wr"><h2 id="wr" data-fold-head>What would prove this wrong</h2><p class="ph-test">Take people who have just reached a long-held goal or retired. If those who take on a new real task with a result they can see within days report no more purpose after six months than those who only add leisure, this page is wrong.</p><p class="ph-note">Cor grades the split between wanting and liking in healthy humans as tested many times (E133). Its extension to apps and feeds is graded untested (E131). The seven-system map behind SEEKING is graded contested (E11).</p><p class="ph-obj"><b>Strongest objection</b>Purpose may come from mattering to other people more than from having a challenge. A retiree with a hard, visible hobby can still feel empty if nobody needs them.</p></section>
+</div>
+<p class="ph-share"><a href="../">All decodes</a><a href="https://cor.demismatch.com">Open Cor</a><span class="u">whatreally.is/purpose</span></p>
+</main>
+<footer class="ft"><p>Every claim traces to Cor, the evidence atlas at <a href="https://cor.demismatch.com">cor.demismatch.com</a>. Part of <a href="https://demismatch.com">Demismatch</a>.</p><p class="nmd">So now what: general suggestions, not medical advice.</p></footer>
+<script>
+// every block folds: tap its heading. All open by default; with no script nothing folds and everything shows.
+document.querySelectorAll('[data-fold]').forEach(function (sec) {
+  var h = sec.querySelector('[data-fold-head]'); if (!h) return;
+  var m = document.createElement('span'); m.className = 'ph-tg'; m.setAttribute('aria-hidden', 'true'); m.textContent = '−';
+  (h.classList.contains('ph-vs-h') ? h.lastElementChild : h).appendChild(m);
+  h.setAttribute('role', 'button'); h.setAttribute('tabindex', '0'); h.setAttribute('aria-expanded', 'true');
+  function flip() { var shut = sec.classList.toggle('is-shut'); h.setAttribute('aria-expanded', String(!shut)); m.textContent = shut ? '+' : '−'; }
+  h.addEventListener('click', flip);
+  h.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip(); } });
+});
+</script>
+<script src="../page.js" defer></script><script src="../line-band.js" defer></script>
+</body></html>
