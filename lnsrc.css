@@ -1,0 +1,22 @@
+/* The source line under the then-and-now film, on its dark card (Maarten, 23 Nov 2026: "So I actually do want the
+   same format on the timeline bit"; Open Brain 5324). Shut: "N sources: Nesse 2019; ...; N Cor records. Full list +",
+   centred, in the card's light colours. Open: the full list in the card, left-aligned, the time scale under its label.
+   Loaded last, with no layer, on all 28 pages that carry the card: the 14 subject pages (site.py) and the 14 hand-made
+   pages. Every selector starts with .ln-src details.srcs so it wins over read.css's rules for the other lists.
+   look.css names only. */
+.ln-src details.srcs{margin:0}
+.ln-src details.srcs>summary{display:block;box-sizing:border-box;min-height:44px;padding:11px 0;cursor:pointer;list-style:none;font:400 var(--t-meta)/1.4 var(--serif);color:color-mix(in srgb,var(--parchment-soft) 55%,transparent);text-align:center;text-wrap:balance}
+.ln-src details.srcs>summary::-webkit-details-marker{display:none}
+.ln-src details.srcs>summary .sl-n{font-weight:600;color:var(--parchment-soft)}
+.ln-src details.srcs>summary .sl-c{font:500 var(--t-meta)/1.4 var(--mono);color:var(--parchment-soft);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;white-space:nowrap}
+.ln-src details.srcs>summary .sl-c::after{content:"+";display:inline-block;margin-left:4px;font-weight:600;text-decoration:none}
+.ln-src details.srcs[open]>summary .sl-c::after{content:"\2212"}
+.ln-src details.srcs>summary .sl-x,.ln-src details.srcs[open]>summary .sl-o{display:none}
+.ln-src details.srcs[open]>summary .sl-x{display:inline}
+.ln-src details.srcs>summary:focus-visible{outline:2px solid var(--parchment-soft);outline-offset:3px;border-radius:3px}
+.ln-src details.srcs .rfs{display:block;margin:2px 0 10px;text-align:left}
+.ln-src details.srcs .rf{display:block;padding:7px 0;color:color-mix(in srgb,var(--parchment-soft) 88%,transparent);text-align:left}
+.ln-src details.srcs .rf+.rf{border-top:1px solid color-mix(in srgb,var(--parchment-soft) 22%,transparent)}
+.ln-src details.srcs .rf a{color:inherit;text-decoration-color:color-mix(in srgb,var(--parchment-soft) 40%,transparent)}
+.ln-src details.srcs .rf .gl{color:var(--gold)}
+.ln-src details.srcs .ln-k{display:block;margin:14px 0 2px;font:500 var(--t-label)/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:color-mix(in srgb,var(--parchment-soft) 55%,transparent)}
