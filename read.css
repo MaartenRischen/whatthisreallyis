@@ -4,16 +4,21 @@
    is made by builders/reading.py: short paragraphs (.pg), folded sources (details.srcs), the second
    paragraph folded behind its first sentence (details.more), and four tabs (.tabs, .tab-p, .tab-next). */
 
-/* sources folded behind their count */
+/* sources folded behind a line that names them (Maarten, 23 Nov 2026, option A; Open Brain 5315):
+   "11 sources: Nesse 2019; ...; 3 more; 4 Cor records. Full list +". The words come from look/srcline.py. */
 details.srcs{margin:8px 0 0}
-details.srcs>summary{display:inline-flex;align-items:baseline;gap:4px;cursor:pointer;list-style:none;font:500 var(--t-meta)/1.2 var(--mono);padding:5px 0;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;opacity:.72}
+details.srcs>summary{display:block;box-sizing:border-box;min-height:44px;padding:11px 0;cursor:pointer;list-style:none;font:400 var(--t-meta)/1.4 var(--serif);color:var(--dim);text-align:left}
 details.srcs>summary::-webkit-details-marker,details.more>summary::-webkit-details-marker{display:none}
-details.srcs>summary::after{content:"+";text-decoration:none;display:inline-block;margin-left:2px;font-weight:600}
-details.srcs[open]>summary::after{content:"\2212"}
-details.srcs[open]>summary{opacity:1}
-details.srcs>summary b{font-weight:600}
+details.srcs>summary .sl-n{font-weight:600;color:var(--ink)}
+details.srcs>summary .sl-c{font:500 var(--t-meta)/1.4 var(--mono);color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;white-space:nowrap}
+details.srcs>summary .sl-c::after{content:"+";display:inline-block;margin-left:4px;font-weight:600;text-decoration:none}
+details.srcs[open]>summary .sl-c::after{content:"\2212"}
+details.srcs>summary .sl-x,details.srcs[open]>summary .sl-o{display:none}
+details.srcs[open]>summary .sl-x{display:inline}
 details.srcs>summary:focus-visible,details.more>summary:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:3px}
-details.srcs .rfs{margin-top:4px}
+details.srcs .rfs{margin-top:0;gap:0}
+details.srcs .rf{padding:7px 0}
+details.srcs .rf+.rf{border-top:1px solid var(--rule)}
 .ph-link details.srcs{grid-column:2/-1}
 .ph-tree li .rf{display:block}
 
@@ -105,3 +110,5 @@ details.ph-cor[open]{grid-column:1/-1;margin-top:8px;padding:5px 12px 10px;backg
 .mk-nums{padding-top:30px}
 .mk-num b{font-size:var(--t-h3);line-height:1.1;overflow-wrap:break-word}
 .mk-num details.srcs>summary b{display:inline;font:inherit;font-weight:600;letter-spacing:0;color:inherit}
+/* the grade word in an open list: the box's own rule for big figures (.mk-num b) blew it up to headline size (23 Nov 2026) */
+.mk-num .rf b.gl{display:inline;font:500 var(--t-label)/1.4 var(--mono);letter-spacing:.14em}
