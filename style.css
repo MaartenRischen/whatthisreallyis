@@ -302,6 +302,16 @@ body.index main{max-width:var(--col);margin:0 auto;padding:22px var(--gut) 10px}
 .dts .dots{width:min(100%,calc(var(--n) * 10px))}
 .d-on{fill:var(--teal)}.d-off{fill:none;stroke:rgba(58,18,24,.4);stroke-width:1}.d-tp{stroke:var(--bad);stroke-width:1.8}
 .legend .dots{width:24px;height:10px;flex:none}
+/* 23 Nov 2026 (Open Brain 5361): no scores. "Which system wins" keeps, under the list, the reason in words and a row per system of the details it explains */
+.ph-bw .why{font:500 var(--t-body)/1.45 var(--serif);margin:0 0 12px}
+.ph-dr{display:grid;gap:10px;margin:0}
+.ph-dr p{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin:0;font:500 var(--t-meta)/1.3 var(--mono)}
+.ph-dr i{width:22px;height:22px;flex:none;border-radius:50%;background:var(--ink);color:var(--parchment-soft);font:500 var(--t-label)/22px var(--mono);font-style:normal;text-align:center}
+.ph-dr i.win{background:var(--gold);color:var(--ink)}
+.ph-dr .dots{width:calc(var(--n) * 10px);flex:none}
+.ph-dr .nm{flex-basis:100%;font:500 var(--t-body)/1.35 var(--serif)}
+.ph-dr .sy{flex-basis:100%;color:var(--oxblood);text-underline-offset:2px;text-decoration-color:rgba(58,18,24,.35)}
+.ph-dr .note{flex-basis:100%;font:italic 500 var(--t-meta)/1.3 var(--serif);color:var(--dim)}
 /* "Next" on the first of the other cases */
 .tile .nx{justify-self:start;align-self:start;font:500 var(--t-label)/1 var(--mono);color:var(--parchment-soft);background:var(--teal);padding:4px 6px 3px;border-radius:2px;letter-spacing:.14em;text-transform:uppercase}
 @media (min-width:1000px){
