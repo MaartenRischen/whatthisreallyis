@@ -22,11 +22,13 @@ details.srcs .rf+.rf{border-top:1px solid var(--rule)}
 .ph-link details.srcs{grid-column:2/-1}
 .ph-tree li .rf{display:block}
 
-/* a paragraph folded behind its first sentence */
+/* a paragraph folded behind its first sentence and a text control under it: "Learn more", "Close" when open
+   (Maarten, 23 Nov 2026, Open Brain 5325 and 5326). Same type as the source line's control, no plus or minus. */
 .pg{display:block}
-details.more>summary{cursor:pointer;list-style:none;display:block;position:relative;padding-right:34px}
-details.more>summary::after{content:"+";position:absolute;right:0;top:0;width:24px;height:24px;box-sizing:border-box;border:1.5px solid currentColor;border-radius:50%;font:600 var(--t-body)/20px var(--serif);text-align:center}
-details.more[open]>summary::after{content:"\2212"}
+details.more>summary{cursor:pointer;list-style:none;display:block;box-sizing:border-box;min-height:44px}
+details.more>summary .more-c{display:block;margin-top:6px;font:500 var(--t-meta)/1.4 var(--mono);color:var(--ink);text-align:left;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;white-space:nowrap}
+details.more>summary .mo-x,details.more[open]>summary .mo-o{display:none}
+details.more[open]>summary .mo-x{display:inline}
 details.more>.more-r{margin-top:.6em}
 
 /* the look: colours, typefaces, sizes, the top bar, the Cor banner and the foot are look.css's (19 Nov 2026, Open Brain 4948).
