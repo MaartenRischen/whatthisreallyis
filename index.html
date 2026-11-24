@@ -23,8 +23,11 @@
 .hq-go{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .hq:hover,.hq:focus-visible{border-color:var(--teal)}
 .hq:focus-visible{outline:2.5px solid var(--teal);outline-offset:3px}
-@media (max-width:719px){body.index main{padding-left:12px;padding-right:12px}}
-@media (min-width:720px){.hq-hd{max-width:var(--max)}.hq-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.hq-w{grid-column:auto}.hq{padding:12px 16px 16px}.hq-i{width:40px;height:40px;stroke-width:2.2}.hq-n{line-height:40px}.hq-t{font-size:var(--t-h3)}.hq-a{margin-top:8px}}
+.hq-how{max-width:var(--col);margin:4px auto 0;padding:0 var(--gut)}
+.hq-how a{display:block;border:1.5px solid var(--ink);border-radius:var(--radius);padding:13px 12px 12px;text-align:center;text-decoration:none;color:var(--ink);font:500 var(--t-label)/1.35 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.hq-how a:hover,.hq-how a:focus-visible{border-color:var(--teal);color:var(--teal)}
+@media (max-width:719px){body.index main,.hq-how{padding-left:12px;padding-right:12px}}
+@media (min-width:720px){.hq-hd,.hq-how{max-width:var(--max)}.hq-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.hq-w{grid-column:auto}.hq{padding:12px 16px 16px}.hq-i{width:40px;height:40px;stroke-width:2.2}.hq-n{line-height:40px}.hq-t{font-size:var(--t-h3)}.hq-a{margin-top:8px}}
 @media (min-width:1100px){.hq-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}}
 </style></head>
 <body class="index">
@@ -47,5 +50,6 @@
 <a class="hq" href="shyness/"><svg class="hq-i" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 10V54"/><path class="f" d="M22 24.5a7.5 7.5 0 0 1 0 15Z"/><circle cx="43" cy="21" r="5"/><circle cx="54" cy="33" r="5"/><circle cx="42" cy="43" r="5"/></svg><span class="hq-n">What really is <span class="hq-t"><b>shyness</b>?</span></span><span class="hq-a">Being careful around strangers.</span><span class="hq-go">Read the page</span></a>
 <a class="hq" href="gossip/"><svg class="hq-i" viewBox="0 0 64 64" aria-hidden="true"><circle class="f" cx="18" cy="16" r="4.5"/><circle class="f" cx="18" cy="32" r="4.5"/><circle class="f" cx="18" cy="48" r="4.5"/><path class="k" d="M35 16l4 4 8-9M35 48l4 4 8-9"/><path class="x" d="M36 27l10 10M46 27L36 37"/></svg><span class="hq-n">What really is <span class="hq-t"><b>gossip</b>?</span></span><span class="hq-a">Keeping track of who to trust.</span><span class="hq-go">Read the page</span></a>
 </div></main>
+<p class="hq-how"><a href="how-a-decode-is-made/">How a decode is made</a></p>
 <footer class="ft"><p>Every claim traces to Cor, the evidence atlas at <a href="https://cor.demismatch.com">cor.demismatch.com</a>. Part of <a href="https://demismatch.com">Demismatch</a>.</p><p class="nmd">So now what: general suggestions, not medical advice.</p></footer>
 </body></html>
