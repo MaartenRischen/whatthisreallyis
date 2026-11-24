@@ -7,6 +7,9 @@
 # The read records live in the private workspace repo. This job reads them with a read-only deploy key of that repo,
 # stored here as the secret WORKSPACE_READ_KEY. It checks every page, not only the pages a push changed: otherwise a
 # later harmless push would deploy a page an earlier push changed and the check stopped.
+#
+# SWITCHED OFF on 24 Nov 2026 (Maarten): the second AI read of page text is dropped. readcheck.py in the workspace has
+# ENFORCED = False, so the check step below passes without checking anything. This file still does the deploy.
 name: Read check, then deploy
 on:
   push:
@@ -61,5 +64,9 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
+      # GitHub lists a fresh artifact a few seconds after the upload reports success. On 24 Nov 2026 three runs in a row
+      # failed here with "No artifacts named github-pages were found" because the deploy asked within half a second.
+      - name: Wait for GitHub to list the uploaded site
+        run: sleep 20
       - id: deployment
         uses: actions/deploy-pages@v4
