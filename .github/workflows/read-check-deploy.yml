@@ -1,10 +1,13 @@
-# The hard stop on the server (Open Brain 5461, 24 Nov 2026). Every push to any branch, from any machine, a cloud session
-# or the GitHub web editor, runs the read check of the Demismatch workspace on every page of this repo: no sentence goes
-# live without a passing outside read (decode method step 11; workspace whatreally/reads/README.md). The site deploys
-# to GitHub Pages only from main and only after the check passed. A failed check, a missing key or an unreachable
-# workspace means no deploy; the live site stays as it was.
+# The stop on the server (Open Brain 5461, 24 Nov 2026; since dispatch 5493 the same day it checks the writer's step
+# record, decode method version 9, Open Brain 5492). Every push to any branch, from any machine, a cloud session or the
+# GitHub web editor, runs readcheck.py of the Demismatch workspace on every page of this repo: a sentence that is in
+# neither the baseline of 24 Nov nor part 6 of its page's record (whatreally/ledgers/<page>/record.json) stops the
+# deploy, and so does a page that prints method version 9 or higher without its whole record (workspace
+# whatreally/README.md, "The step record and the stop"). The site deploys to GitHub Pages only from main and only after
+# the check passed. A failed check, a missing key or an unreachable workspace means no deploy; the live site stays as
+# it was.
 #
-# The read records live in the private workspace repo. This job reads them with a read-only deploy key of that repo,
+# The records, the baseline, the Cor index and the method file live in the private workspace repo. This job reads them with a read-only deploy key of that repo,
 # stored here as the secret WORKSPACE_READ_KEY. It checks every page, not only the pages a push changed: otherwise a
 # later harmless push would deploy a page an earlier push changed and the check stopped.
 #
@@ -40,14 +43,14 @@ jobs:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             whatreally/builders/readcheck.py
-            whatreally/reads/
             whatreally/ledgers/
             cor-needs/no-record-reads.md
-      - name: Read check, every page
+            claude-web/project-docs/claude/decode-method.md
+      - name: Step record check, every page
         run: |
           echo "site ${GITHUB_SHA::7}, workspace $(git -C ws rev-parse --short HEAD)"
           python3 ws/whatreally/builders/readcheck.py check-site site
-          echo "read check passed: every sentence on every page has a passing read or is in the baseline of 24 Nov 2026"
+          echo "step record check passed: every sentence on every page is in the baseline of 24 Nov 2026 or in its page's record"
   deploy:
     needs: read-check
     if: github.ref == 'refs/heads/main'
