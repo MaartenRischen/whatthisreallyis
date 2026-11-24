@@ -1,0 +1,65 @@
+# The hard stop on the server (Open Brain 5461, 24 Nov 2026). Every push to any branch, from any machine, a cloud session
+# or the GitHub web editor, runs the read check of the Demismatch workspace on every page of this repo: no sentence goes
+# live without a passing outside read (decode method step 11; workspace whatreally/reads/README.md). The site deploys
+# to GitHub Pages only from main and only after the check passed. A failed check, a missing key or an unreachable
+# workspace means no deploy; the live site stays as it was.
+#
+# The read records live in the private workspace repo. This job reads them with a read-only deploy key of that repo,
+# stored here as the secret WORKSPACE_READ_KEY. It checks every page, not only the pages a push changed: otherwise a
+# later harmless push would deploy a page an earlier push changed and the check stopped.
+name: Read check, then deploy
+on:
+  push:
+    branches: ['**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: read-check-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  read-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: The workspace key is set (no key, no check, no deploy)
+        env:
+          K: ${{ secrets.WORKSPACE_READ_KEY }}
+        run: |
+          if [ -z "$K" ]; then echo "::error::Secret WORKSPACE_READ_KEY is missing: the read records cannot be read, so nothing deploys."; exit 1; fi
+      - uses: actions/checkout@v4
+        with:
+          path: site
+      - uses: actions/checkout@v4
+        with:
+          repository: MaartenRischen/demismatch-workspace
+          ssh-key: ${{ secrets.WORKSPACE_READ_KEY }}
+          path: ws
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            whatreally/builders/readcheck.py
+            whatreally/reads/
+            whatreally/ledgers/
+            cor-needs/no-record-reads.md
+      - name: Read check, every page
+        run: |
+          echo "site ${GITHUB_SHA::7}, workspace $(git -C ws rev-parse --short HEAD)"
+          python3 ws/whatreally/builders/readcheck.py check-site site
+          echo "read check passed: every sentence on every page has a passing read or is in the baseline of 24 Nov 2026"
+  deploy:
+    needs: read-check
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
