@@ -434,7 +434,7 @@ details.ph-cor[open]{padding:4px 12px 11px;background:var(--card);border-left:3p
 .mk-why{font:400 var(--t-meta)/1.4 var(--mono);margin:0 0 14px;padding:8px 11px;border-left:3px solid var(--bad);background:var(--card)}
 .mk-why b{color:var(--bad);font-weight:600}
 }
-</style><link rel="stylesheet" href="../read.css?v=4"><noscript><style>.tab-p[hidden]{display:block!important}.tabs,.tab-next{display:none!important}</style></noscript><link rel="stylesheet" href="../lnsrc.css?v=1">
+</style><link rel="stylesheet" href="../read.css?v=5"><noscript><style>.tab-p[hidden],.fn-box[hidden]{display:block!important}.tabs,.tab-next{display:none!important}</style></noscript><link rel="stylesheet" href="../lnsrc.css?v=1">
 </head>
 <body>
 <nav class="doors" aria-label="Demismatch"><div class="d-in"><a class="dm" href="https://demismatch.com">Demismatch</a><a href="https://whyyoufeelsobad.com/">Why you feel so bad</a><a href="https://howyoushouldliveyourlife.com/">How you should live your life</a><a href="../" aria-current="page">whatreally.is</a><a href="https://cor.demismatch.com/">Cor</a></div></nav>
@@ -462,7 +462,7 @@ details.ph-cor[open]{padding:4px 12px 11px;background:var(--card);border-left:3p
 <script>
 (function(){
   var page=document.getElementById("page");
-  page.querySelectorAll(".mk-myth").forEach(function(b){var tg=function(e){if(e.target.closest("a,details"))return;b.setAttribute("aria-expanded",String(b.classList.toggle("open")));};b.addEventListener("click",tg);b.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();tg(e);}});});
+  page.querySelectorAll(".mk-myth").forEach(function(b){var tg=function(e){if(e.target.closest("a,details,.fn-box"))return;b.setAttribute("aria-expanded",String(b.classList.toggle("open")));};b.addEventListener("click",tg);b.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();tg(e);}});});
   document.querySelectorAll('[data-fold]').forEach(function(sec){
     var h=sec.querySelector('[data-fold-head]'); if(!h) return;
     var m=document.createElement('span'); m.className='ph-tg'; m.setAttribute('aria-hidden','true'); m.textContent='\u2212';
@@ -492,6 +492,16 @@ details.ph-cor[open]{padding:4px 12px 11px;background:var(--card);border-left:3p
   });
   window.addEventListener("hashchange",function(){var i=fromHash(); if(i>=0) show(i,0);});
   var i=fromHash(); if(i>0){show(i,0); var e=document.getElementById(location.hash.slice(1)); if(e!==ps[i]) e.scrollIntoView();}
+})();
+</script>
+<script>
+(function(){
+  var page=document.getElementById("page"); if(!page) return;
+  page.addEventListener("click",function(e){
+    var a=e.target.closest("a.fn"); if(!a) return; e.preventDefault();
+    var b=document.getElementById(a.getAttribute("href").slice(1)); if(!b) return;
+    var open=b.hidden; b.hidden=!open; a.setAttribute("aria-expanded",String(open));
+  });
 })();
 </script>
 <script src="../page.js" defer></script><script src="../line-band.js" defer></script>

@@ -58,6 +58,19 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .mk-para{font:400 var(--t-body)/1.52 var(--serif);margin:14px 0 0;padding:12px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .mk-para summary{font:600 var(--t-body)/1.38 var(--serif)}
 .ph-verdict details.srcs>summary,.ph-verdict .rf,.ph-verdict .rf a{color:var(--ink)}
+/* 25 Nov 2026 (Maarten: "make the count line under the hero slightly larger and bolder") */
+.ph-verdict>details.srcs>summary{font-size:calc(var(--t-meta)*1.16);font-weight:500}
+.ph-verdict>details.srcs>summary .sl-n{font-weight:700}
+.ph-verdict>details.srcs>summary .sl-c{font-size:var(--t-meta)}
+/* 25 Nov 2026 (Maarten): reference numbers in the text. A tap opens the references under the sentence. */
+a.fn{position:relative;top:-.5em;font:600 var(--t-label)/0 var(--mono);vertical-align:baseline;margin:0 1px;padding:0 3px;border-radius:3px;color:var(--teal);text-decoration:none;background:none}
+a.fn::after{content:"";position:absolute;inset:-12px -9px}
+a.fn[aria-expanded="true"]{background:var(--teal);color:var(--parchment-soft);padding-top:.65em;padding-bottom:.65em}
+a.fn:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.fn-box{display:block;margin:8px 0 12px;padding:4px 12px;border-left:3px solid var(--teal);background:var(--card);font:400 var(--t-meta)/1.4 var(--serif);color:var(--ink);text-align:left}
+.fn-box[hidden]{display:none}
+.fn-box .rf{display:block;padding:7px 0}
+.fn-box .rf+.rf{border-top:1px solid var(--rule)}
 .ph-verdict .rf a{text-decoration-color:rgba(58,18,24,.32)}.ph-verdict .rf .gl{color:var(--teal)}
 
 .mk-isnt{margin-top:30px;background:none;border:0;border-top:2px solid var(--ink);border-radius:0;box-shadow:none;padding:14px 0 0}
