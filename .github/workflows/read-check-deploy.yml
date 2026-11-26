@@ -18,6 +18,10 @@ on:
   push:
     branches: ['**']
   workflow_dispatch:
+  # Cor's counts on the pages are taken from Cor at deploy time (step "Cor's counts" below; dispatch Open Brain 5718,
+  # 26 Nov 2026). A daily run keeps them in step with Cor when no page changed.
+  schedule:
+    - cron: '40 22 * * *'
 permissions:
   contents: read
 concurrency:
@@ -63,10 +67,24 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          path: site
+      - uses: actions/checkout@v4
+        with:
+          repository: MaartenRischen/demismatch-workspace
+          ssh-key: ${{ secrets.WORKSPACE_READ_KEY }}
+          path: ws
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            whatreally/builders/corstats.py
+      # Every count of Cor on every page (graded findings, works, findings per system) is set from the Cor site's
+      # snapshot, https://cor.demismatch.com/data/snapshot.json. If it cannot be fetched, the deploy stops.
+      - name: Cor's counts
+        run: python3 ws/whatreally/builders/corstats.py apply site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: site
       # GitHub lists a fresh artifact a few seconds after the upload reports success. On 24 Nov 2026 three runs in a row
       # failed here with "No artifacts named github-pages were found" because the deploy asked within half a second.
       - name: Wait for GitHub to list the uploaded site
